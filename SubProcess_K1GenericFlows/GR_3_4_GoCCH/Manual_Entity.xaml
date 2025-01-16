@@ -1,0 +1,789 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="OCR_Entity" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="736,3865.6" sap2010:WorkflowViewState.IdRef="OCR_Entity_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Manual_Entity" sap:VirtualizedContainerService.HintSize="608,3800.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Manual_Entity" sap:VirtualizedContainerService.HintSize="545.6,3600.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,3309.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,144" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Providing values for entity : &quot;+&quot;Citibank&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'SPbinderLibrary.InputFo…'" sap:VirtualizedContainerService.HintSize="449.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="17, 633, 82, 18" CvTextArgument="Citibank (T)" CvType="Text" DesignTimeRectangle="13, 628, 300, 27" DesignTimeScaleFactor="1.25" ElementType="ListItem" FullSelectorArgument="&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='FirstExpander' /&gt;&lt;ctrl name='CITIBANK (T)' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='ActivityExpander' /&gt;&lt;ctrl automationid='' name='SPbinderLibrary.InputForm' role='list item' check:text='SPbinderLibrary.InputForm' /&gt;" Guid="00f3246f-bccd-4393-afa9-b052096ebb9d" InformativeScreenshot="1984ac573e77117a7ff3d1e1f12162a0.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="449.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_4" NumberOfTimes="20" StartAt="1">
+                    <ui:RepeatNumberOfTimesX.Body>
+                      <ActivityAction x:TypeArguments="x:Int32">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItem" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,460.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'M 0 2 L 4 2 L 2 0 Z'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_33" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="1896, 516, 10, 10" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='LineUp' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='LineUp' role='push button' check:text='M 0 2 L 4 2 L 2 0 Z' /&gt;" Guid="44989390-d47d-4679-b761-527fa4f07e09" ImageBase64="" InformativeScreenshot="a4e5e722e83ccbbef94ebf324965f2fc.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'M 0 2 L 4 2 L 2 0 Z'" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="NClick_34" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="1896, 516, 10, 10" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='LineUp' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='LineUp' role='push button' check:text='M 0 2 L 4 2 L 2 0 Z' /&gt;" Guid="44989390-d47d-4679-b761-527fa4f07e09" ImageBase64="" InformativeScreenshot="f6fd199e6608c410912560499a1eac5c.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (K1_KR67484848) | 1040 | 2022 | Binder*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:RepeatNumberOfTimesX.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:RepeatNumberOfTimesX>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <Sequence DisplayName="Line_5_InterestIncome_1" sap:VirtualizedContainerService.HintSize="449.6,2146.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Entering Values for Line_5_InterestIncome.&quot;]" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="743, 556, 13, 13" CvTextArgument="+" CvType="Text" DesignTimeRectangle="746, 596, 10, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' automationid='' check:text='+' /&gt;" Guid="059fc5bc-c9a0-4c27-8ffa-0898b11195f8" ImageBase64="" InformativeScreenshot="784c1f95f652e427d37680941cfd2122.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 196" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="586fc033-f0ba-4cd5-8a27-94155b953262" ImageBase64="" InformativeScreenshot="55a43cd426d7938e506e2dfa97baf80a.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Text="US GOVERNMENT INTEREST INCOME" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="381, 591, 359, 27" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="a795998b-e853-464f-a91a-cf3ace0a3c3b" ImageBase64="" InformativeScreenshot="2396716a97d1f75e9e0e5d168b2f9b6a.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="1193, 556, 13, 13" CvTextArgument="+" CvType="Text" DesignTimeRectangle="1196, 596, 10, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' automationid='' check:text='+' /&gt;" Guid="03c61e3e-bcc0-4518-bebf-818e3275de93" ImageBase64="" InformativeScreenshot="87939e2bdd723eb68c9c78500b1b37ec.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 196" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="586fc033-f0ba-4cd5-8a27-94155b953262" ImageBase64="" InformativeScreenshot="9624d0799f4ef5d89aadde0bba4a5a81.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Text="100" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="1069, 591, 121, 27" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl idx='3' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl automationid='' role='editable text' /&gt;" Guid="469f23b4-a4d9-4f76-998d-eb3690ae3e58" ImageBase64="" InformativeScreenshot="57966194ef51a1bd6f3733753b19efbd.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPbinderLibrary.ReClass…'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_31" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="1205, 593, 131, 18" CvTextArgument="US Treasury obliga..." CvType="Text" DesignTimeRectangle="1220, 591, 171, 27" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 4' role='client' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 4' role='client' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" Guid="1811a31a-72ae-42e6-8491-6c607e92066f" ImageBase64="" InformativeScreenshot="174cd5be2a355594fc4646a9717baea6.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.PointOffset>
+                      <uix:PointOffset Position="BottomRight" X="-10" Y="-11" />
+                    </uix:TargetAnchorable.PointOffset>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'US Treasury'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_32" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="5, 66, 256, 17" CvTextArgument="US Treasury obligation interest (portfolio)" CvType="Text" DesignTimeRectangle="6, 67, 257, 18" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl idx='3' name='SPbinderLibrary.ReClassType' role='list item' /&gt;&lt;ctrl name='US Treasury obligation interest (portfolio)' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='SPbinderLibrary.ReClassType' role='list item' /&gt;&lt;ctrl name='US Treasury obligation interest (portfolio)' role='text' automationid='' check:text='US Treasury obligation interest (portfolio)' /&gt;" Guid="d01f79d9-1026-4407-97da-a6cb1322c27f" InformativeScreenshot="b371bbba5b73b2af562e71d727fc16ee.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Line_5_InterestIncome_2" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvTextArea="743, 556, 13, 13" CvTextArgument="+" CvType="Text" DesignTimeRectangle="746, 589, 10, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' automationid='' check:text='+' /&gt;" Guid="059fc5bc-c9a0-4c27-8ffa-0898b11195f8" ImageBase64="" InformativeScreenshot="29857d5697d36cb3f15f43c90a4c1e6c.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 155" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="586fc033-f0ba-4cd5-8a27-94155b953262" InformativeScreenshot="39bdb7c984608236d832e49c703a956e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Text="OTHER INTEREST INCOME - US" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="381, 584, 359, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="a795998b-e853-464f-a91a-cf3ace0a3c3b" InformativeScreenshot="c5cc68a6897c4bcd130b2d1f4d860dc5.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvTextArea="1193, 556, 13, 13" CvTextArgument="+" CvType="Text" DesignTimeRectangle="1196, 589, 10, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' automationid='' check:text='+' /&gt;" Guid="03c61e3e-bcc0-4518-bebf-818e3275de93" ImageBase64="" InformativeScreenshot="8a4c46bd65c980e93705f53be4c4d7a1.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 155" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="586fc033-f0ba-4cd5-8a27-94155b953262" InformativeScreenshot="39bdb7c984608236d832e49c703a956e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Text="200" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="1069, 584, 121, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="469f23b4-a4d9-4f76-998d-eb3690ae3e58" InformativeScreenshot="db5533028ed89495187dd4f56ba8678f.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,269.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSelectItem DisplayName="Select Item 'SPbinderLibrary.ReClass…'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="SPbinderLibrary.ReClassType" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="3">
+                                <x:String>SPbinderLibrary.ReClassType</x:String>
+                                <x:String>SPbinderLibrary.ReClassType</x:String>
+                                <x:String>SPbinderLibrary.ReClassType</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable CvTextArea="1226, 553, 134, 15" CvTextArgument="Line 5 - Interest inc..." CvType="Text" DesignTimeRectangle="1220, 584, 171, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 4' role='client' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 4' role='client' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" Guid="5223c052-6a88-4a43-8f0d-a67bd90d77a9" ImageBase64="" InformativeScreenshot="5b4aa9ba63dcb6666dbd4672fa38f783.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                            </uix:NSelectItem.Target>
+                          </uix:NSelectItem>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                  </Sequence>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <Sequence DisplayName="Line 11A - Other portfolio income (loss)_1" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Entering Values for Line 11A-Other portfolio income.&quot;]" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="743, 556, 13, 13" CvTextArgument="+" CvType="Text" DesignTimeRectangle="746, 754, 10, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_025' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_025' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' automationid='' check:text='+' /&gt;" Guid="059fc5bc-c9a0-4c27-8ffa-0898b11195f8" InformativeScreenshot="450a86f37d19ac988096c5b8fc8cfe6e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 155" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="586fc033-f0ba-4cd5-8a27-94155b953262" InformativeScreenshot="39bdb7c984608236d832e49c703a956e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Text="NET SECTION 987 GAIN/(LOSS) FROM FLOW-THROUGH INVESTMENTS" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="381, 749, 359, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_025' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="a795998b-e853-464f-a91a-cf3ace0a3c3b" ImageBase64="" InformativeScreenshot="d036a3f2b3e692b0ef40116bc927ee7e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="1193, 556, 13, 13" CvTextArgument="+" CvType="Text" DesignTimeRectangle="1196, 754, 10, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_025' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' automationid='' check:text='+' /&gt;" Guid="03c61e3e-bcc0-4518-bebf-818e3275de93" ImageBase64="" InformativeScreenshot="27d00588074bb86ceebd806bab62229d.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 155" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="586fc033-f0ba-4cd5-8a27-94155b953262" InformativeScreenshot="39bdb7c984608236d832e49c703a956e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Text="300" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="1069, 782, 121, 27" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_025' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="469f23b4-a4d9-4f76-998d-eb3690ae3e58" ImageBase64="" InformativeScreenshot="d898c9d09a625ccce6ffc456a7b9ee71.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,269.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NSelectItem DisplayName="Select Item 'SPbinderLibrary.ReClass…'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="SPbinderLibrary.ReClassType" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NSelectItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="3">
+                          <x:String>SPbinderLibrary.ReClassType</x:String>
+                          <x:String>SPbinderLibrary.ReClassType</x:String>
+                          <x:String>SPbinderLibrary.ReClassType</x:String>
+                        </scg:List>
+                      </uix:NSelectItem.Items>
+                      <uix:NSelectItem.Target>
+                        <uix:TargetAnchorable CvTextArea="1226, 553, 134, 15" CvTextArgument="Line 5 - Interest inc..." CvType="Text" DesignTimeRectangle="1220, 584, 171, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 4' role='client' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 4' role='client' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" Guid="5223c052-6a88-4a43-8f0d-a67bd90d77a9" ImageBase64="" InformativeScreenshot="5b4aa9ba63dcb6666dbd4672fa38f783.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NSelectItem.Target>
+                    </uix:NSelectItem>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+            </Sequence>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Line 11A - Other portfolio income (loss)_2" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvTextArea="743, 556, 13, 13" CvTextArgument="+" CvType="Text" DesignTimeRectangle="746, 789, 10, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_025' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' automationid='' check:text='+' /&gt;" Guid="059fc5bc-c9a0-4c27-8ffa-0898b11195f8" ImageBase64="" InformativeScreenshot="64bd1c234d6d3764fc78c46467b01ebe.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 155" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="586fc033-f0ba-4cd5-8a27-94155b953262" InformativeScreenshot="39bdb7c984608236d832e49c703a956e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Text="QEF INCOME FROM FLOW-THROUGH INVESTMENTS" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="381, 784, 359, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_025' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="a795998b-e853-464f-a91a-cf3ace0a3c3b" ImageBase64="" InformativeScreenshot="a9eea799af8c44ff06006f41c7790fc4.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvTextArea="1193, 556, 13, 13" CvTextArgument="+" CvType="Text" DesignTimeRectangle="1196, 789, 10, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_025' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' automationid='' check:text='+' /&gt;" Guid="03c61e3e-bcc0-4518-bebf-818e3275de93" ImageBase64="" InformativeScreenshot="5a889327e86b307609553fa1ee77e153.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 155" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="586fc033-f0ba-4cd5-8a27-94155b953262" InformativeScreenshot="39bdb7c984608236d832e49c703a956e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Text="400" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="1069, 784, 121, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_025' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="469f23b4-a4d9-4f76-998d-eb3690ae3e58" ImageBase64="" InformativeScreenshot="5f22275a32dd9769a0848b04df32e81e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,269.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSelectItem DisplayName="Select Item 'SPbinderLibrary.ReClass…'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="SPbinderLibrary.ReClassType" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="3">
+                                <x:String>SPbinderLibrary.ReClassType</x:String>
+                                <x:String>SPbinderLibrary.ReClassType</x:String>
+                                <x:String>SPbinderLibrary.ReClassType</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable CvTextArea="1226, 553, 134, 15" CvTextArgument="Line 5 - Interest inc..." CvType="Text" DesignTimeRectangle="1220, 584, 171, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 4' role='client' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 4' role='client' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" Guid="5223c052-6a88-4a43-8f0d-a67bd90d77a9" ImageBase64="" InformativeScreenshot="5b4aa9ba63dcb6666dbd4672fa38f783.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                            </uix:NSelectItem.Target>
+                          </uix:NSelectItem>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                  </Sequence>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="20" StartAt="1">
+              <ui:RepeatNumberOfTimesX.Body>
+                <ActivityAction x:TypeArguments="x:Int32">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,272.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'M 0 0 L 2 2 L 4 0 Z'" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="NClick_25" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="1891, 904, 18, 20" CvType="ArrowButton" DesignTimeRectangle="1896, 910, 10, 10" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='LineDown' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='LineDown' role='push button' check:text='M 0 0 L 2 2 L 4 0 Z' /&gt;" Guid="48076a1f-b448-4f34-903e-10f9dfd21955" InformativeScreenshot="fc7867097fd5120a7e5a8232c1b78b58.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </ui:RepeatNumberOfTimesX.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:RepeatNumberOfTimesX>
+            <Sequence DisplayName="Line 11I - Other Income/loss_1" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Entering Values for Line 11l-Other Income/loss.&quot;]" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="743, 556, 13, 13" CvTextArgument="+" CvType="Text" DesignTimeRectangle="746, 773, 10, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_033' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_025' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' automationid='' check:text='+' /&gt;" Guid="059fc5bc-c9a0-4c27-8ffa-0898b11195f8" ImageBase64="" InformativeScreenshot="70f58cb40b5590c2987ccf9f919ed5a2.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 155" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="586fc033-f0ba-4cd5-8a27-94155b953262" InformativeScreenshot="39bdb7c984608236d832e49c703a956e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Text="OTHER INTEREST INCOME - FOREIGN " Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="381, 768, 359, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_033' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="a795998b-e853-464f-a91a-cf3ace0a3c3b" ImageBase64="" InformativeScreenshot="65e6ffa5e4cea6164050386a2590fe96.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="1193, 556, 13, 13" CvTextArgument="+" CvType="Text" DesignTimeRectangle="1196, 773, 10, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_033' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' automationid='' check:text='+' /&gt;" Guid="03c61e3e-bcc0-4518-bebf-818e3275de93" ImageBase64="" InformativeScreenshot="80dff6b35b936d45d153c80bbb91ae88.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 155" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="586fc033-f0ba-4cd5-8a27-94155b953262" InformativeScreenshot="39bdb7c984608236d832e49c703a956e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Text="700" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="1069, 768, 121, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_033' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="469f23b4-a4d9-4f76-998d-eb3690ae3e58" ImageBase64="" InformativeScreenshot="b8bda639f338484cbbe8bd1124fc9853.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,269.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NSelectItem DisplayName="Select Item 'SPbinderLibrary.ReClass…'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="SPbinderLibrary.ReClassType" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NSelectItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="3">
+                          <x:String>SPbinderLibrary.ReClassType</x:String>
+                          <x:String>SPbinderLibrary.ReClassType</x:String>
+                          <x:String>SPbinderLibrary.ReClassType</x:String>
+                        </scg:List>
+                      </uix:NSelectItem.Items>
+                      <uix:NSelectItem.Target>
+                        <uix:TargetAnchorable CvTextArea="1226, 553, 134, 15" CvTextArgument="Line 5 - Interest inc..." CvType="Text" DesignTimeRectangle="1220, 584, 171, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 4' role='client' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 4' role='client' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" Guid="5223c052-6a88-4a43-8f0d-a67bd90d77a9" ImageBase64="" InformativeScreenshot="5b4aa9ba63dcb6666dbd4672fa38f783.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NSelectItem.Target>
+                    </uix:NSelectItem>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+            </Sequence>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Line 11I - Other Income/loss_2" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvTextArea="743, 556, 13, 13" CvTextArgument="+" CvType="Text" DesignTimeRectangle="746, 808, 10, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_033' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' automationid='' check:text='+' /&gt;" Guid="059fc5bc-c9a0-4c27-8ffa-0898b11195f8" ImageBase64="" InformativeScreenshot="cf960713edb98c5cd0eaf3beda600be3.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 155" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="586fc033-f0ba-4cd5-8a27-94155b953262" InformativeScreenshot="39bdb7c984608236d832e49c703a956e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Text="QEF INCOME FROM FLOW-THROUGH INVESTMENTS" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="381, 803, 359, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_033' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 1' role='client' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="a795998b-e853-464f-a91a-cf3ace0a3c3b" ImageBase64="" InformativeScreenshot="d60e9c70e89767c645cda87da06c615e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '+'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="1189, 786, 22, 24" CvType="Icon" DesignTimeRectangle="1190, 784, 23, 28" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_033' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl idx='2' name='+' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_033' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl automationid='' name='+' role='push button' check:text='+' /&gt;" Guid="02745a4f-4804-4026-96fa-8455005d9483" InformativeScreenshot="e0203021d163c0fb1de31214910524c6.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 155" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="586fc033-f0ba-4cd5-8a27-94155b953262" InformativeScreenshot="39bdb7c984608236d832e49c703a956e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Text="800" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="1069, 803, 121, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_033' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 3' role='client' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="469f23b4-a4d9-4f76-998d-eb3690ae3e58" ImageBase64="" InformativeScreenshot="a8515645dcd57be2cb56e8cf65164b3d.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,269.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSelectItem DisplayName="Select Item 'SPbinderLibrary.ReClass…'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="SPbinderLibrary.ReClassType" ScopeIdentifier="e4cbac28-10e0-4d70-b16e-6aabd8efcfc1" Version="V3">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="3">
+                                <x:String>SPbinderLibrary.ReClassType</x:String>
+                                <x:String>SPbinderLibrary.ReClassType</x:String>
+                                <x:String>SPbinderLibrary.ReClassType</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable CvTextArea="1226, 553, 134, 15" CvTextArgument="Line 5 - Interest inc..." CvType="Text" DesignTimeRectangle="1220, 584, 171, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='2' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 4' role='client' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='Item: System.Data.DataRow, Column Display Index: 4' role='client' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" Guid="5223c052-6a88-4a43-8f0d-a67bd90d77a9" ImageBase64="" InformativeScreenshot="5b4aa9ba63dcb6666dbd4672fa38f783.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                            </uix:NSelectItem.Target>
+                          </uix:NSelectItem>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                  </Sequence>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 1920, 1020" FilePath="C:\SurePrepLocalFiles\SPbinder\spbinder.exe" IconBase64="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" InformativeScreenshot="9a00e5acb02398c5171dee4b3945ecca.png" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder *' /&gt;" Title="SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="545.6,48" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,428" sap2010:WorkflowViewState.IdRef="Sequence_20">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Perform_PostReClass.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Perform_PostReClass.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="SP_Binder_InputForms" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="b1bad04e-1b6e-471f-823b-c50669a122ae" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Navigation_Form_Activity" sap:VirtualizedContainerService.HintSize="449.6,668" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT FORMS'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b1bad04e-1b6e-471f-823b-c50669a122ae" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CvElementArea="1772, 557, 128, 36" CvTextArea="1788, 568, 95, 15" CvTextArgument="INPUT FORMS" CvType="Button" DesignTimeRectangle="1774, 560, 125, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='INPUT FORMS' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='INPUT FORMS' role='push button' automationid='' check:text='INPUT FORMS' /&gt;" Guid="f38a4de0-6a51-44af-904a-b14b64a1da4e" InformativeScreenshot="37fa0c06cc7c68a92af5f843d273f6dd.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPbinderLibrary.InputFo…'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_29" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b1bad04e-1b6e-471f-823b-c50669a122ae" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CvTextArea="17, 603, 83, 19" CvTextArgument="Citibank (T)" CvType="Text" DesignTimeRectangle="13, 598, 300, 27" DesignTimeScaleFactor="1.25" ElementType="ListItem" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='FirstExpander' /&gt;&lt;ctrl idx='3' name='SPbinderLibrary.InputForm' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='FirstExpander' /&gt;&lt;ctrl automationid='' name='SPbinderLibrary.InputForm' role='list item' check:text='SPbinderLibrary.InputForm' /&gt;" Guid="0fac33cd-80d7-4013-9e14-893102e0018f" InformativeScreenshot="6c882ce8efeb817bf7a134484c566474.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'System.Data.DataRowView'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_30" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b1bad04e-1b6e-471f-823b-c50669a122ae" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CvTextArea="17, 841, 52, 13" CvTextArgument="Income" CvType="Text" DesignTimeRectangle="13, 834, 287, 28" DesignTimeScaleFactor="1.25" ElementType="ListItem" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='SectionExpander' /&gt;&lt;ctrl idx='2' name='System.Data.DataRowView' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='SectionExpander' /&gt;&lt;ctrl automationid='' name='System.Data.DataRowView' role='list item' check:text='System.Data.DataRowView' /&gt;" Guid="43c17b41-2df9-4357-8816-cdc0cb256096" InformativeScreenshot="92304e1b3a0f2c756b5446e14c1557c4.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 1920, 1020" FilePath="C:\SurePrepLocalFiles\SPbinder\spbinder.exe" IconBase64="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" InformativeScreenshot="b45d3729f6acc67262d4762dd9c13e2a.png" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" Title="SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Extraction_InputForms_Manual.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Extraction_InputForms_Manual.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

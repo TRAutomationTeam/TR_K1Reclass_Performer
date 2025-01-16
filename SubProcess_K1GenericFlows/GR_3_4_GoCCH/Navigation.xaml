@@ -1,0 +1,297 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Navigation" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,1268.8" sap2010:WorkflowViewState.IdRef="Navigation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Navigation" sap:VirtualizedContainerService.HintSize="545.6,1204" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="SP_Binder" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="bf042cb3-3e22-470e-8209-da68c8eecfeb" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,549.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'graphic'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bf042cb3-3e22-470e-8209-da68c8eecfeb" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="836, 70, 20, 20" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;ctrl idx='37' role='graphic' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='graphic' /&gt;" Guid="bc75efbe-afa5-4a90-a1da-b64b703fed2b" ImageBase64="" InformativeScreenshot="15e910a32613a72d30a6a22f95c28d20.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (K1_KR67484848) | 1040 | 2022 | Binder*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'SPBinder - K-1 Reclass'" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="bf042cb3-3e22-470e-8209-da68c8eecfeb" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,456.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Auto recommended pop up message appeared.&quot;]" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bf042cb3-3e22-470e-8209-da68c8eecfeb" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CvElementArea="488, 195, 94, 33" CvTextArea="501, 203, 67, 16" CvTextArgument="Continue" CvType="Button" DesignTimeRectangle="489, 196, 94, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='btnContinue' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnContinue' role='push button' check:text='Continue' /&gt;" Guid="ad1ba25b-0adf-4739-96a9-862643d211bb" InformativeScreenshot="12a62822da9443d799b5a591fadecc80.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPBinder - K-1 Reclass ' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="16, 55, 552, 17" CvTextArgument="SurePrep auto-recommended suggestions in the 'K-1 Reclass' column to expedite" CvType="Text" DesignTimeRectangle="16, 55, 552, 17" ElementType="Text" Guid="06d113c8-f6de-4714-842c-1f5991befaa0" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Auto recommended pop up message box does not appear.&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 600, 250" DesignTimeScaleFactor="1.25" Guid="df8a7786-31ae-44c1-9353-359cb22552bf" InformativeScreenshot="4c899aa705dfb034bcdfd1d575b8c982.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPBinder - K-1 Reclass ' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'POST RECLASS'" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bf042cb3-3e22-470e-8209-da68c8eecfeb" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="1772, 418, 129, 36" CvTextArea="1786, 430, 100, 13" CvTextArgument="POST RECLASS" CvType="Button" DesignTimeRectangle="1774, 421, 125, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='POST RECLASS' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='POST RECLASS' role='push button' automationid='' check:text='POST RECLASS' /&gt;" Guid="362c5931-612e-4252-bde2-73ed302c2bd8" InformativeScreenshot="70e3e58133bd208b87411de309b39468.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (K1_KR67484848) | 1040 | 2022 | Binder*' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'Are you'" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="bf042cb3-3e22-470e-8209-da68c8eecfeb" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,654.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Post Reclass message appeared.&quot;]" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Yes'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bf042cb3-3e22-470e-8209-da68c8eecfeb" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CvElementArea="208, 167, 101, 33" CvTextArea="243, 178, 27, 15" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="209, 169, 100, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='btnOk' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnOk' role='push button' check:text='Yes' /&gt;" Guid="06aa8d6c-2746-43a0-9ee6-f7105080dbf7" InformativeScreenshot="db86b4de68791458d4acf0c191319f1c.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Post Re-class' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="90, 116, 290, 15" CvTextArgument="Are you sure you want to post this reclass?" CvType="Text" DesignTimeRectangle="93, 114, 289, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='txtMessage' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='txtMessage' role='text' check:text='Are you sure you want to post this reclass?' /&gt;" Guid="b830e254-b562-4119-a988-3badfcc32228" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASUAAAAXCAYAAABNolllAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAnnSURBVHhe7Zpr6E1NF8CV8kFRIh8ol0SEiIjklkJuEZFQLrl8QPkgJCUklCIpH5RLSaIkklCUayKRQi4h9xCKlDTP+1vO2s866z/73HpfzvtvfrU7Z/aePbNmzVpr1sw5TUIikUjUESkoJRKJuiIFpUQiUVekoJRIJOqKFJQSiURdkYJSIpGoK1JQSiQSdUU0KB04cCA0adJEPhOJavny5Us4e/Zs+PHjR+FOnIsXL4aXL18WSvVLJXLynHqWJ0+eiB/xmcf58+fL1vlTPHv2LHTt2lU+/1d8+vQpdOrUScbM1blz53Du3LnC0980CEq/fv0Kw4YNC82aNZNPyolENdy5cyd06NAhfPjwoXCnIQSsvn37ilPWM5XKefz48TBkyJBC6TeVBKXv37+HV69ehZ8/fxbu/D0qkfe/CWPetWtXaNmyZVHQbxCUHj16JAHp6NGjoWnTplJOJKoBBy4XlHhGnXoPSpXKuWfPnpqCUj3xN+R9//59aN++fZF+GwSl7du3S4b07ds3WSEoW1D+4MGDpQ5BizJ1165dG9q1axc6duwoKdnJkycLbxSzevXqBhnY169fQ/fu3bPtIu/SBgqij9GjR4fHjx/LM2Dy6deybNkyufI4dOhQaNGihbTJpQaUZ3S+D8ozZszI5GLibt68Gfr06SNjbtOmTZg9e3b4+PFj4Y1/+fz5s6TFXubr16+H5s2bh6dPn2Y6VBn5pMx9iBlMKYfRjHfr1q2FOyG8ePFC+mMOlNevX4fWrVtnbaxYsSLTEYvT9OnTw9u3b+UZoOOhQ4eGfv36ydxQD908ePAge67v6+Xlo+zr6NyhP/RI39xHNvSWl7GjD8Y0ZcoUqcs7GLm1P96lDX1O236uYvZRSk4LdX095NI5GzNmTNY3n/Sl+HlF16NGjcra4YrNLzCman2R55s3by4aq47Jy+K3WshOPNC54HPjxo3ZXNm26Gfu3LmZjXB5+we1P3xBKQpKpKoDBw7MAtG6deukbM8GaLhbt27h9u3bmXDUHzFihJwlAOcJCHr37l0pW7jnn1nnvHr1amjVqlW4fPmyPCO9Xbp0aejZs6c4N/iAASgjZjBAX0wCMnuqCUpLliyRVBswnrZt24ZTp05JmUnA+ObNmydlDzryukS/48aNEz3yffjw4eHdu3fyjH19ly5d5D54g4FyqzgByS4AOAO6ZwFgIQDexSgwDg9Oy5imTp1auPNbzwQqdWjmfNq0aWHSpElSBtpELuTLIyY7chJcFi5cmNkSgZ/03jqyRfVy48YN2Q7Qxr59+8QZ1MZ4F11q4NRx0Rf1a7EPD7aCjVhUthMnTogd09f+/fvF1lkgbB2dV+xn8eLFFW3navFFbMLqwuJl8ehcHDlyRMoEO3QTO2/zcuTB9q1///7Z4gtFQYmzADuZBAuE5L7ila97bvbUCgoaNGhQ2Lt3b+HOv/AMR7SrNY6nRh0LLn41rzYoXbhwQd5XQ7BUE5RsmfEybhtkzpw5IysLK4yHgIsxarDV7BCHyZOBPrjP85jBlHMYDfY67lmzZomO7MpkdR+DMakMENOzr4M8thwjJrseHfgjAx9cLTG9qE1i8LzDu95e1Nbpqxb78Hi/gJhsfrvi64wcOTJs2rRJvpfD91nOFzXzsc8tMXk9LMw6/7TZu3fvooCikHHPnDkzOmfAfQIXuvUBsigoMfl2NVfHsVsArwjdEjx8+LBw5zcIjmAxcMS2/8kyyDZ0a6OK8s6v2PuxOjFnUVDahAkTZItFMLQrS57R+T58GWdmgixMJoZOAIqB82smRXDSDCXPGOz9WJ1yDqPzh241s8MZCU7IH3PY06dPywrHnHDhQPShASamZ/q3dXw5Rkz2vPdKtRfTC6icsX7A3q/FPjzoEBuxVDJnvg6/RBGYx44dK35it5ge32c5X4zJY/HP0cu2bdtCr169Mnsgo9T5x6Z69OghW0Tq2eBy79490SfxZPfu3dkOQyFgsTOIjS8LSmrACOUvm+57RehA2L+q4HqtX7++UKsYdRDSP5yT79wD7/yKvR+ro0ZYiufPn4cdO3aIstiCYHh5Ruf78GX6YoL8mLnyflJlvDpWjF8DVJ6x2PuxOpU4jOqFOjqPBClWVLIExqCZMVsgypcuXZIyVJIp0bat48sxYrLnvVeqvZhegAUDR4z1A7H71diHB9vARiyVzFmsDls9/l4wefJkCVDXrl0rPCnG96lt5flirC+Lf75hwwY5s9IjBbCZEqCj+/fvS/vIyjsKW9Bbt26FRYsWybPDhw8XnuT7OWRBiXTebt0UVlYE1XTfKyJ2UFUJOCXbuJUrVxadw2BIrOQWnUjSbKB/UnNLzFny0NSdjEbbxvksXmm+TPZYatsTQ7PCnTt3yqceQOal1RiubgfVYOwqWInD0CbBCGPS8yldUVetWlW0BfVzC7RNH/QFlQQl5okMi61KHjpmq3fmg3mxxwWAXGxrYsQcTbcxeg7FuzbbB90qxrJaax8xOWOwlWGbpBkWxGTzcxarY8EX8nYc1fpitds3b/NQys9oV+3Vg/7tHBLoNNHxZEGJIBHbtzPBpGA8B68I6s+ZM0cODjUV496bN28k4udB8MMomHzrVBx0c58DZNoh2nLCbw+6cS5SSo3g9Dt//vyKghJtclDX1mRnBBcOa/VQjnYHDBhQNCF+gkjxrZyAku2qEoN9NO9ZJwbGxAGkZlm0wyqlgUQz2TVr1mQHugQo/3OqRw0VY9PzLGDMyKHtA0GSYKUHvszfsWPHqg5KGlz8nwk9GCmLkuqPTw6frS2xJaBtDTAedaQrV65IGZm3bNkiulR5eJcDWg5qgXnmlyE96LZQ9vbh5YxBIEZ39jwsFnCqCUrogENgbCZGLb6odqaH09RjqwVeFpIFe1hdys/UT/2POUDfBFdNPnjOAbzOh0eCkq7gef/gRik8p55XBCD08uXLxcgZFFsABuOzLgvKIlPSdi04R6m/BKAc9qQ84+LnaX6mzgtKGABt6UXbmnUBbevPsIwB2dkrlwpKQBt2y0vaXO6QEofFeDXIK+zfS/0lAJhE7Y/nBBacp1RQAur5IKj/2rfv0pf9GRc9kWFVG5SYW/2pmLYOHjwo9z2aUdHXxIkT5R5zW+1fAqjHlovPmL3wLm1ocKZt+5eAcvYRk9NjdUf7bIFjAadcUMLOVA7aWbBgQZENWGrxRQ3IOseMi18rwcvCgqD2Rn2SlvHjx2fzT/8804u/x+i5EnX0vs6JBnnVQZ6/Fh10/0kwFAbpnbOxw0rKJNmsJVE73pES///8taDErzxE81LZVGODFJf/XMVS3ERtpKDU+PjjQUlTPtLKvHOCxoim5aTD/n8ZidpJQanx8dcypUQikYiRglIikagjQvgHvEJi8gSqW0AAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bf042cb3-3e22-470e-8209-da68c8eecfeb" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="223, 119, 100, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='btnOk' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnOk' role='push button' check:text='Ok' /&gt;" Guid="2495d15f-5eee-4f8f-901a-82897e52d0fd" InformativeScreenshot="d1a98140feaf812365c3841fd82a2dfe.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Post Re-class' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="93, 63, 236, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='txtMessage' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='txtMessage' role='text' check:text='K-1 Reclass has posted successfully' /&gt;" Guid="206b4651-1ce8-4f8c-b9bb-4f3c7181bb37" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Post Reclass message did not appear.&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 446, 219" DesignTimeScaleFactor="1.25" Guid="38f8e79a-5bb2-4e1c-8c02-dfc791def072" InformativeScreenshot="37edff1e8b1d9e908751083d4950ec92.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Post Re-class' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="90, 116, 290, 15" CvTextArgument="Are you sure you want to post this reclass?" CvType="Text" DesignTimeRectangle="93, 114, 289, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='txtMessage' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='txtMessage' role='text' check:text='Are you sure you want to post this reclass?' /&gt;" Guid="834902ab-6b2f-46f7-8697-8201a31bb9b2" ImageBase64="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" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 1920, 1020" FilePath="C:\SurePrepLocalFiles\SPbinder\spbinder.exe" IconBase64="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" InformativeScreenshot="879a1f8f6c7e1f5d9954ab4a81ba5393.png" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (K1_KR67484848) | 1040 | 2022 | Binder*' /&gt;" Title="SPbinder - Anderson, Jack (K1_KR67484848) | 1040 | 2022 | Binder*" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="SP_Binder" sap:VirtualizedContainerService.HintSize="483.2,999.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="65858b12-13cc-4a97-941d-f2d87b2a4945" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,668" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPbinderLibrary.ReClass…'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="65858b12-13cc-4a97-941d-f2d87b2a4945" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="333, 455, 125, 31" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='cboAddSection' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='cboAddSection' role='combo box' /&gt;" Guid="66ff5fb2-ee4f-4dd2-9180-a43074de8b56" ImageBase64="" InformativeScreenshot="9383fca96b18b1ee7c420f8e55fed84f.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (K1_KR700022334) | 1040 | 2022 | Binde*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="TopRight" X="-10" Y="14" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Line 5 - Interest income'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="65858b12-13cc-4a97-941d-f2d87b2a4945" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="6, 67, 146, 18" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl idx='3' name='SPbinderLibrary.ReClassType' role='list item' /&gt;&lt;ctrl name='Line 5 - Interest income' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.ReClassType' role='list item' /&gt;&lt;ctrl name='Line 5 - Interest income' role='text' automationid='' check:text='Line 5 - Interest income' /&gt;" Guid="47745692-f3d5-4ce0-a3d0-480cd63f7021" ImageBase64="" InformativeScreenshot="d8e230fd84e7a4d984e7bd11886b83a7.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ADD SECTION'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="65858b12-13cc-4a97-941d-f2d87b2a4945" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="470, 455, 138, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='btnAddReclass' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='btnAddReclass' role='push button' check:text='ADD SECTION' /&gt;" Guid="a846a21f-d611-40de-986f-ae9c708105dd" ImageBase64="" InformativeScreenshot="85c23ec557d8b1e193a869d9930240af.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (K1_KR700022334) | 1040 | 2022 | Binde*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 1920, 1020" FilePath="C:\SurePrepLocalFiles\SPbinder\spbinder.exe" IconBase64="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" InformativeScreenshot="242a411c249f7714b89f61f5c9c3768e.png" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (K1_KR700022334) | 1040 | 2022 | Binde*' /&gt;" Title="SPbinder - Anderson, Jack (K1_KR700022334) | 1040 | 2022 | Binde*" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

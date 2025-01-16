@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="wq-S06YvIkiRmiYoVWisYg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="1a05d261-047d-49fb-a6a0-6df9e3b6b987" CvTextArea="17, 606, 145, 18" CvTextArgument="K1 Manual Entity (T)" CvType="Text" DesignTimeRectangle="0, 0, 0, 0" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='*{0}*' role='text' /&gt;&quot;, in_str_ManualEntity)]" FuzzySelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='{0}' role='text' automationid='TxtRowCount' /&gt;&quot;, in_str_ManualEntity)]" Guid="592f92bf-1c3a-4bb2-a9a8-bf25b49feef2" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - *' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="429350dd-7bca-4513-b2bb-e5d0bbe934a0" CvTextArea="42, 548, 267, 16" CvTextArgument="Sch E, p 2 - Partnership Passthrough (K" CvType="Text" DesignTimeRectangle="44, 549, 316, 18" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='TopEntityExpander' /&gt;&lt;ctrl automationid='HeaderSite' /&gt;&lt;ctrl name='Sch E, p 2 - Partnership Passthrough (K-1 1065)' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='TopEntityExpander' /&gt;&lt;ctrl automationid='HeaderSite' /&gt;&lt;ctrl name='Sch E, p 2 - Partnership Passthrough (K-1 1065)' role='text' automationid='' check:text='Sch E, p 2 - Partnership Passthrough (K-1 1065)' /&gt;" Guid="c8eec308-508b-410b-9302-cac997997f70" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="17e3a99d3d7e09df6f83818d3021ee16.png" xmlns="">02dvMm8B1gESS0HoE9_vu2g</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="K1 Manual Entity" IsVariable="False" Name="in_str_ManualEntity" />
+    </scg:List>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

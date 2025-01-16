@@ -1,0 +1,604 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Perform_PostReClass" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_dt_K1Conso" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="in_str_TaxSoftware" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1194.4,4256.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Perform_PostReClass_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Perform_PostReClass" sap:VirtualizedContainerService.HintSize="1204.8,4192" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="exec_TC_34" />
+      <Variable x:TypeArguments="x:Boolean" Name="exec_TC_35" />
+      <Variable x:TypeArguments="x:Boolean" Name="exec_TC_36_10" />
+      <Variable x:TypeArguments="x:Boolean" Name="exec_TC_37" />
+      <Variable x:TypeArguments="x:Boolean" Name="exec_TC_07" />
+      <Variable x:TypeArguments="x:Boolean" Name="exec_TC_08" />
+      <Variable x:TypeArguments="x:Boolean" Name="exec_TC_09" />
+      <Variable x:TypeArguments="x:Boolean" Name="exec_TC_33" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Post_ReClass" sap:VirtualizedContainerService.HintSize="1142.4,4103.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="96c4c380-297e-43d8-9500-020e8585249c" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1108.8,3788.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="str_aastate" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1046.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Performing Post ReClass&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Line 1'" sap:VirtualizedContainerService.HintSize="1046,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="96c4c380-297e-43d8-9500-020e8585249c" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="256, 516, 1654, 451" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='mainScrollViewer' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='mainScrollViewer' role='pane' check:fulltext='Line 1 - Ordinary business income/loss&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Line 5 - Interest' /&gt;" Guid="f978f8cb-12d4-459a-b8b7-5c4100e45187" ImageBase64="" InformativeScreenshot="c9e75c175a2e37373d3596b8f3557562.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (K1_KR00037913 (V1)) | 1040 | 2022 | B*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aastate" DisplayName="Get Attribute 'POST RECLASS'" sap:VirtualizedContainerService.HintSize="1046,207" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[str_aastate]" ScopeIdentifier="96c4c380-297e-43d8-9500-020e8585249c" Version="V3">
+              <uix:NGetAttributeGeneric.Target>
+                <uix:TargetAnchorable CvElementArea="1801, 476, 103, 28" CvTextArea="1813, 485, 80, 11" CvTextArgument="POST RECLASS" CvType="Button" DesignTimeRectangle="1803, 478, 100, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='POST RECLASS' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='POST RECLASS' role='push button' automationid='' check:text='POST RECLASS' /&gt;" Guid="9050a06a-393b-41a8-a7c5-ca4add0cc8f5" InformativeScreenshot="56b1757c99b8d5150e4e574594c7aa34.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - *' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetAttributeGeneric.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NGetAttributeGeneric>
+            <If Condition="[str_aastate=&quot;unavailable&quot;]" sap:VirtualizedContainerService.HintSize="1046.4,548" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,297.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'POST RECLASS'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="96c4c380-297e-43d8-9500-020e8585249c" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CvElementArea="1634, 460, 128, 35" CvTextArea="1648, 471, 100, 13" CvTextArgument="POST RECLASS" CvType="Button" DesignTimeRectangle="1636, 463, 125, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='POST RECLASS' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='POST RECLASS' role='push button' automationid='' check:text='POST RECLASS' /&gt;" Guid="e014f362-f8bf-4a13-ae56-64d59bbbc594" InformativeScreenshot="f8e68022efe40e2b9863104bddab91d3.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NCheckState DisplayName="Check App State 'Are you'" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="96c4c380-297e-43d8-9500-020e8585249c" Timeout="20" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1016,2424" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Yes'" sap:VirtualizedContainerService.HintSize="954,189" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="96c4c380-297e-43d8-9500-020e8585249c" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CvElementArea="162, 116, 102, 34" CvTextArea="198, 127, 27, 15" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="163, 119, 100, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='btnOk' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnOk' role='push button' check:text='Yes' /&gt;" Guid="a8c774af-e300-472e-8adb-6fae126926c7" InformativeScreenshot="b64806928fd98a15b54781177349db95.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Post Re-class' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CvElementArea="162, 116, 102, 34" CvTextArea="198, 127, 27, 15" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="201, 125, 24, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='btnOk' /&gt;&lt;ctrl name='_Yes' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnOk' /&gt;&lt;ctrl name='_Yes' role='text' automationid='' check:text='_Yes' /&gt;" Guid="9ab85e85-0a1c-45cb-9270-26213d7d351f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAXCAYAAAAYyi9XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAISSURBVEhLY5DYkf2fnnjUQqrjUQupjuEWll1d/j/izJT/rsc6MBSBsMux9v+J52f9T78wF6s8sRhuYcDJ/v9f/vz4/+vvn/9J52ejKCq+svT/r39//n/+/f2/x/EuFDlSMUqQLn585P8/IHz368t/uV35YDGD/VX/X/74+P/3v7//J93bCVdLLsaIw0sfH/0HgXMfHoD5R9/eAvNBNIjfdmvj/w+/voLFQOAT0NcFlxfD9W99cf7/9z+/oLL//3/78/O/xt5SuDyGhTAfgXx64M11MH3/6+v/Rgdq/lseagAb8Oz7+/+RZ6b+9z3RC44GkKVqe0rA6eDvv3//r3568t/0YB3YPJAa6Z25cPMxLAThqmurwHEGAl+BFsB8sPzJcbDYokeH4WpBjgKBnjtb/0+5txvMPv7uNlweHWO1EIRhQbntxQW42Il3d8BioAQGE5v5YC9YbO2zU/+VdxeB4x8EQD4HOcb8YD1cLQjjtPDQmxtgjZuen4OLXfv0FCyGDex4eQmsBmQpKJ5Bav8AExooiP1P9sHNIMnC88CEBAK5lxahqMWFYVGAHEokWVh7fQ3Yxa9+fvrvdLQN7Jvw01P+T76367/S7sL/OvsqwMEttTMHzD79/h7YjIl3EdmJJAtBeMb9vf/fQ7MFyHJQogKlYq/j3fD4hAFQit796jI8T4MwTgtphUctpDqms4XZ/wHtrEvact+34wAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="954,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;TC_34&#x9;Verify Confirmation dialog box on Post Reclass button.&quot;+&quot;Passed.&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:LogMessage>
+                        <Assign DisplayName="TC 34 exec status" sap:VirtualizedContainerService.HintSize="954,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[exec_TC_34]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <uix:NCheckState DisplayName="Check App State 'K-1 Reclass'" sap:VirtualizedContainerService.HintSize="954,521" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="96c4c380-297e-43d8-9500-020e8585249c" Timeout="20" Version="V3">
+                          <uix:NCheckState.IfExists>
+                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="96c4c380-297e-43d8-9500-020e8585249c" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable CvElementArea="220, 116, 103, 34" CvTextArea="260, 126, 23, 16" CvTextArgument="Ok" CvType="Button" DesignTimeRectangle="223, 119, 100, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='btnOk' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnOk' role='push button' check:text='Ok' /&gt;" Guid="e4b4eb8e-1b92-413a-832f-49e9e3054445" InformativeScreenshot="b1ec4b4b98e29151556a41ef94914a15.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Post Re-class' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CvElementArea="220, 116, 103, 34" CvTextArea="260, 126, 23, 16" CvTextArgument="Ok" CvType="Button" DesignTimeRectangle="263, 125, 19, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='btnOk' /&gt;&lt;ctrl name='_Ok' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnOk' /&gt;&lt;ctrl name='_Ok' role='text' automationid='' check:text='_Ok' /&gt;" Guid="65e3396f-84e1-4fb5-bec5-06e61cbbf023" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG0SURBVEhL7ZPPSwJREMf7M7oEXaKuXTrUMSKoY5eOEUEHQYSIDkGE0C/yUnSJ6pIE3cIgSCooK4swlcpoLSXZYs0Ua93U1dVpZ8BlH7sEUp7yLV/Y9953Pu/t7ExD474FaqU63FT/EN56NA6DvhXoOJky3UcZ4BjkST6AWMxBWX1wyKUihCUBerzzms/O7dDeWYpj4vVi4M0HNnjOvlNQSHyBGc4FtlsnBD9jdFBOKUD/pYO8VcO3eC8F3Ik8NLmtjHFX8NPevfhK86rhj1KcAmbDLsaEaj+ehKwig6TkodMzbYC7hGv6Oi4jQJuaWlxj4Ck5A/lSAbrP57Q1vfhsioADV0sM3PG0B0q5BBHpDbpO7ZqfgWfUn/gTPJZNEtB6s6nB8cBCSYF4/oMBoww3R2Ovd4ExVYTwonrD0eCGBseBt54IbRv8v845gjHXCVmElsMxJoaBV6ol8pUwVIuTPyMIVgvu6XPuS0e1d30MA9fXuZBLU52PBNapqfCG2FjDgTXy6uEYl1RTimM56jaHo8w6FJsHOxQPqvj0cJwP+VepGNDbd7FIawb4X6oON1UN4Rb4BoOASWtNBpMmAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </uix:NCheckState.IfExists>
+                          <uix:NCheckState.IfNotExists>
+                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </uix:NCheckState.IfNotExists>
+                          <uix:NCheckState.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="0, 0, 347, 168" DesignTimeScaleFactor="1.25" FuzzySelectorArgument="[Nothing]" Guid="ab6d5724-2465-4e9a-a904-9723cf15d0e3" InformativeScreenshot="9de6ac9f18eaf19fd8af1c0423afff12.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Post Re-class' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CvTextArea="91, 65, 238, 17" CvTextArgument="K-1 Reclass has posted successfully" CvType="Text" DesignTimeRectangle="93, 63, 236, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='txtMessage' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='txtMessage' role='text' check:text='K-1 Reclass has posted successfully' /&gt;" Guid="04316519-10e9-4958-803f-1aea37a5a70c" ImageBase64="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" SearchSteps="Selector, FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NCheckState.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NCheckState>
+                        <ui:LogMessage DisplayName="TC 35 exec status" sap:VirtualizedContainerService.HintSize="954,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;TC_35&#x9;Verify Post Reclass for Classic and simplified binder.&quot;+&quot;Passed.&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:LogMessage>
+                        <Assign DisplayName="TC 34 exec status" sap:VirtualizedContainerService.HintSize="954,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[exec_TC_35]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <uix:NCheckState DisplayName="Check App State 'K-1 Reclass'" sap:VirtualizedContainerService.HintSize="954,521" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="96c4c380-297e-43d8-9500-020e8585249c" Timeout="20" Version="V3">
+                          <uix:NCheckState.IfExists>
+                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Ok'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="96c4c380-297e-43d8-9500-020e8585249c" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable CvElementArea="220, 116, 103, 34" CvTextArea="260, 126, 23, 16" CvTextArgument="Ok" CvType="Button" DesignTimeRectangle="223, 119, 100, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='btnOk' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnOk' role='push button' check:text='Ok' /&gt;" Guid="e4b4eb8e-1b92-413a-832f-49e9e3054445" InformativeScreenshot="b1ec4b4b98e29151556a41ef94914a15.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Post Re-class' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CvElementArea="220, 116, 103, 34" CvTextArea="260, 126, 23, 16" CvTextArgument="Ok" CvType="Button" DesignTimeRectangle="263, 125, 19, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='btnOk' /&gt;&lt;ctrl name='_Ok' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnOk' /&gt;&lt;ctrl name='_Ok' role='text' automationid='' check:text='_Ok' /&gt;" Guid="5d61f943-80d7-4ead-8e16-f8d4ac6abbe3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG0SURBVEhL7ZPPSwJREMf7M7oEXaKuXTrUMSKoY5eOEUEHQYSIDkGE0C/yUnSJ6pIE3cIgSCooK4swlcpoLSXZYs0Ua93U1dVpZ8BlH7sEUp7yLV/Y9953Pu/t7ExD474FaqU63FT/EN56NA6DvhXoOJky3UcZ4BjkST6AWMxBWX1wyKUihCUBerzzms/O7dDeWYpj4vVi4M0HNnjOvlNQSHyBGc4FtlsnBD9jdFBOKUD/pYO8VcO3eC8F3Ik8NLmtjHFX8NPevfhK86rhj1KcAmbDLsaEaj+ehKwig6TkodMzbYC7hGv6Oi4jQJuaWlxj4Ck5A/lSAbrP57Q1vfhsioADV0sM3PG0B0q5BBHpDbpO7ZqfgWfUn/gTPJZNEtB6s6nB8cBCSYF4/oMBoww3R2Ovd4ExVYTwonrD0eCGBseBt54IbRv8v845gjHXCVmElsMxJoaBV6ol8pUwVIuTPyMIVgvu6XPuS0e1d30MA9fXuZBLU52PBNapqfCG2FjDgTXy6uEYl1RTimM56jaHo8w6FJsHOxQPqvj0cJwP+VepGNDbd7FIawb4X6oON1UN4Rb4BoOASWtNBpMmAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </uix:NCheckState.IfExists>
+                          <uix:NCheckState.IfNotExists>
+                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </uix:NCheckState.IfNotExists>
+                          <uix:NCheckState.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="0, 0, 347, 168" DesignTimeScaleFactor="1.25" FuzzySelectorArgument="[Nothing]" Guid="ab6d5724-2465-4e9a-a904-9723cf15d0e3" InformativeScreenshot="9de6ac9f18eaf19fd8af1c0423afff12.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Post Re-class' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CvTextArea="91, 65, 238, 17" CvTextArgument="K-1 Reclass has posted successfully" CvType="Text" DesignTimeRectangle="93, 63, 236, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='txtMessage' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='txtMessage' role='text' check:text='K-1 Reclass has posted successfully' /&gt;" Guid="32852776-3a83-4253-9d75-f04a05f69ddf" ImageBase64="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" SearchSteps="Selector, FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NCheckState.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NCheckState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="954,176" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;TC_36 &amp; TC_10 (D)&#x9;Verify Post Reclass when Cancel button on dialog box is clicked.&quot;+&quot;Passed.&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:LogMessage>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="954,176" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;TC_37&#x9;Verify Toast message on Post Reclass button click.&quot;+&quot;Passed.&quot;]" />
+                        <ui:MultipleAssign DisplayName="TC 36_10 &amp; 37" sap:VirtualizedContainerService.HintSize="954,173" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                          <ui:MultipleAssign.AssignOperations>
+                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[exec_TC_36_10]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[exec_TC_37]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                            </scg:List>
+                          </ui:MultipleAssign.AssignOperations>
+                        </ui:MultipleAssign>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="0, 0, 400, 168" DesignTimeScaleFactor="1.25" FuzzySelectorArgument="[Nothing]" Guid="c089598b-aebe-4073-9e21-fd6acb063325" InformativeScreenshot="eb83c886ef342ab7ce335e8b22a3e067.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Post Re-class' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="90, 65, 292, 15" CvTextArgument="Are you sure you want to post this reclass?" CvType="Text" DesignTimeRectangle="93, 63, 289, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='txtMessage' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='txtMessage' role='text' check:text='Are you sure you want to post this reclass?' /&gt;" Guid="f20651c2-524d-4c0c-ac4c-4b7f887bce37" ImageBase64="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" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NCheckState DisplayName="Check App State 'INPUT FORMS'" sap:VirtualizedContainerService.HintSize="1046.4,800" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="96c4c380-297e-43d8-9500-020e8585249c" Timeout="5" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears (classic)" sap:VirtualizedContainerService.HintSize="496,549.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;TC_33&#x9;Verify Input Forms on Simplified binder.&quot;+&quot;Passed - Not applicable.&quot;]" />
+                  <Assign DisplayName="TC 33 exec status" sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[exec_TC_33]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="433.6,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_TCReport">[in_dt_K1Conso]</InOutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_TCID">TC_33</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_TCStatus">[if(exec_TC_33,"Pass","Fail")]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_TCComments">[If(in_str_TaxSoftware.Trim.ToUpper.Contains("LACERTE") Or in_str_TaxSoftware.Trim.ToUpper.Contains("ULTRA"),String.Empty,"NA - Only applicable For Simplified Binder")]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear (simplified)" sap:VirtualizedContainerService.HintSize="496,549.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;TC_33&#x9;Verify Input Forms on Simplified binder.&quot;+&quot;Passed.&quot;]" />
+                  <Assign DisplayName="TC 33 exec status" sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[exec_TC_33]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="433.6,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_TCReport">[in_dt_K1Conso]</InOutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_TCID">TC_33</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_TCStatus">[if(exec_TC_33,"Pass","Fail")]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_TCComments">Not applicable for this leadsheet binder</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable CVScreenId="ae5da769-e84e-48ba-9d1d-2cb5cf387e90" CvElementArea="1801, 669, 103, 28" CvTextArea="1814, 678, 77, 11" CvTextArgument="INPUT FORMS" CvType="Button" DesignTimeRectangle="1803, 671, 100, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='INPUT FORMS' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='INPUT FORMS' role='push button' automationid='' check:text='INPUT FORMS' /&gt;" Guid="1cb60c6c-7ab1-4c67-96c4-ab609add5991" InformativeScreenshot="96ad2bf9efaa784a2683708878cde986.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1046.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;TC_07&#x9;Verify Post Reclass for OCR entity.&quot;+&quot;Passed&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1046,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;TC_08&#x9;Verify Post Reclass for Proforma'd entity.&quot;+&quot;Passed&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1046,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;TC_09&#x9;Verify Post Reclass for Manual entity.&quot;+&quot;Passed&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <ui:MultipleAssign DisplayName="TC 07 08 09 exec status" sap:VirtualizedContainerService.HintSize="1046,178" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[exec_TC_07]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[exec_TC_08]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[exec_TC_09]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'INPUT FORMS'" sap:VirtualizedContainerService.HintSize="1046,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="96c4c380-297e-43d8-9500-020e8585249c" Timeout="10" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="1772, 460, 128, 35" CvTextArea="1788, 471, 95, 13" CvTextArgument="INPUT FORMS" CvType="Button" DesignTimeRectangle="1774, 463, 125, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='INPUT FORMS' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='INPUT FORMS' role='push button' automationid='' check:text='INPUT FORMS' /&gt;" Guid="8aa09222-20cf-4a35-af82-2bb11d5605c9" ImageBase64="" InformativeScreenshot="30bc6bbbd2557a9b36694a4110f7a97b.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - *' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="1046,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_TCReport">[in_dt_K1Conso]</InOutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCID">TC_07</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCStatus">[if(exec_TC_07,"Pass","Fail")]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCComments" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="1046,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_TCReport">[in_dt_K1Conso]</InOutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCID">TC_08</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCStatus">[if(exec_TC_08,"Pass","Fail")]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCComments" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="1046,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_TCReport">[in_dt_K1Conso]</InOutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCID">TC_09</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCStatus">[if(exec_TC_09,"Pass","Fail")]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCComments" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="1046,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_TCReport">[in_dt_K1Conso]</InOutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCID">TC_34</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCStatus">[if(exec_TC_34,"Pass","Fail")]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCComments" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="1046,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_TCReport">[in_dt_K1Conso]</InOutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCID">TC_35</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCStatus">[if(exec_TC_35,"Pass","Fail")]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCComments" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="1046,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_TCReport">[in_dt_K1Conso]</InOutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCID">TC_36_10</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCStatus">[if(exec_TC_36_10,"Pass","Fail")]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCComments" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="1046,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_TCReport">[in_dt_K1Conso]</InOutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCID">TC_37</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCStatus">[if(exec_TC_37,"Pass","Fail")]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TCComments" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 1920, 1020" FilePath="C:\SurePrepLocalFiles\SPbinder\spbinder.exe" IconBase64="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" InformativeScreenshot="be6a8cd0d9f59da321195bc9d8d40d55.png" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' /&gt;" Title="SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

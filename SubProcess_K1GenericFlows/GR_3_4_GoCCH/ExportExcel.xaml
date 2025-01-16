@@ -1,0 +1,354 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ExportExcel" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_str_LeadsheetExcelpath" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_EntityType" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>948.8,4201.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ExportExcel_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ExportExcel" sap:VirtualizedContainerService.HintSize="707.2,4136.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="SP_Binder" sap:VirtualizedContainerService.HintSize="644.8,4048" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="cb90c06c-f400-4ace-aa1d-d527db79d38b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="611.2,3733.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:WorkbookApplication" Name="Workbook" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dt_LeadsData" />
+              <Variable x:TypeArguments="x:String" Name="str_LeadsData" />
+              <Variable x:TypeArguments="ui:WorkbookApplication" Name="Excel_Workbook" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="30" DisplayName="Click 'LEADS'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb90c06c-f400-4ace-aa1d-d527db79d38b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="66, 950, 48, 13" CvTextArgument="LEADS" CvType="Text" DesignTimeRectangle="13, 940, 156, 34" DesignTimeScaleFactor="1.25" ElementType="TabPage" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' role='page tab' check:text='LEADS' /&gt;" Guid="dcc10915-827a-45ba-ad0e-68e5191de256" InformativeScreenshot="1098ab42bc667572d68f8e7c9ab08c5b.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder -*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:RetryScope DisplayName="Tool Options" sap:VirtualizedContainerService.HintSize="548.8,616.8" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,408.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2" DelayMS="2" DisplayName="Lower Pane" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_RIGHT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition OffsetX="130" OffsetY="100" Position="Center" />
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="118d2ce2-000d-4530-9011-aa659aab4cbd" InformativeScreenshot="b7f565faa49c282ac038969dd33de606" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - *' /&gt;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='InputFormTabControl' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Tools'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb90c06c-f400-4ace-aa1d-d527db79d38b" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="348, 8, 17, 20" CvTextArea="40, 11, 36, 13" CvTextArgument="Tools" CvType="ArrowButton" DesignTimeRectangle="5, 4, 367, 30" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl name='Tools' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Tools' role='menu item' automationid='' check:text='Tools' /&gt;" Guid="68e92687-1f42-4f6b-9b48-f8f77cf9e49b" InformativeScreenshot="8cddb935356f258dad3c81efdc0e0a5a.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean" />
+              </ui:RetryScope.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:RetryScope>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="20" DisplayName="Click 'Force Calculate'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb90c06c-f400-4ace-aa1d-d527db79d38b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="35, 32, 81, 12" CvTextArgument="Force Calculate" CvType="Text" DesignTimeRectangle="35, 32, 81, 12" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Tools' role='menu item' /&gt;&lt;ctrl name='Force Calculate' role='menu item' /&gt;&lt;ctrl name='Force Calculate' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Tools' role='menu item' /&gt;&lt;ctrl name='Force Calculate' role='menu item' /&gt;&lt;ctrl name='Force Calculate' role='text' automationid='' check:text='Force Calculate' /&gt;" Guid="2ded6d79-d37d-47af-8804-8c11780fb302" InformativeScreenshot="6046aef2c65f0c65d0482ad3bdc5ba99.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:RetryScope DisplayName="Tool Options" sap:VirtualizedContainerService.HintSize="548.8,696.8" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="5">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,408.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2" DelayMS="2" DisplayName="Lower Pane" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_RIGHT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition OffsetX="130" OffsetY="100" Position="Center" />
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="118d2ce2-000d-4530-9011-aa659aab4cbd" InformativeScreenshot="b7f565faa49c282ac038969dd33de606" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - *' /&gt;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='InputFormTabControl' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Tools'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb90c06c-f400-4ace-aa1d-d527db79d38b" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CvElementArea="348, 8, 17, 20" CvTextArea="40, 11, 36, 13" CvTextArgument="Tools" CvType="ArrowButton" DesignTimeRectangle="5, 4, 367, 30" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl name='Tools' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Tools' role='menu item' automationid='' check:text='Tools' /&gt;" Guid="68e92687-1f42-4f6b-9b48-f8f77cf9e49b" InformativeScreenshot="8cddb935356f258dad3c81efdc0e0a5a.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean" />
+              </ui:RetryScope.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:RetryScope>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save To Excel...'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb90c06c-f400-4ace-aa1d-d527db79d38b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="43, 71, 99, 13" CvTextArgument="Save To Excel..." CvType="Text" DesignTimeRectangle="43, 71, 99, 13" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Tools' role='menu item' /&gt;&lt;ctrl name='Save To Excel...' role='menu item' /&gt;&lt;ctrl name='Save To Excel...' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Tools' role='menu item' /&gt;&lt;ctrl name='Save To Excel...' role='menu item' /&gt;&lt;ctrl name='Save To Excel...' role='text' automationid='' check:text='Save To Excel...' /&gt;" Guid="e5d32a17-6c4e-43c0-b669-cf617bfa974e" InformativeScreenshot="0bc18ae16abd43adad386085d9d0443c.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Leadsheets-K1_KR_001701…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="548.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="cb90c06c-f400-4ace-aa1d-d527db79d38b" Text="[in_str_LeadsheetExcelpath]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="166, 450, 776, 29" CvType="InputBox" DesignTimeRectangle="169, 455, 752, 22" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="0a618526-ab92-47d3-a3d8-edf02cbf9e31" InformativeScreenshot="834fd8118f2964fcda6473f37736ab95.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb90c06c-f400-4ace-aa1d-d527db79d38b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="695, 541, 110, 34" CvTextArea="733, 550, 33, 16" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="696, 543, 110, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" Guid="ecba9e3f-107f-4eb5-890b-79a4029a7182" InformativeScreenshot="53c8a99c43d517732ea2b761d88f3360.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click '&amp;Yes'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb90c06c-f400-4ace-aa1d-d527db79d38b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="345, 126, 86, 28" CvTextArea="376, 132, 23, 15" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="346, 127, 87, 29" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' check:text='&amp;amp;Yes' /&gt;" Guid="b018b9d8-0936-4677-85de-43b51ba759bb" InformativeScreenshot="31c254692dda92f607a79f28a97db6e4.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='#32770' title='Confirm Save As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="74, 78, 176, 19" CvTextArgument="Do you want to replace it?" CvType="Text" DesignTimeRectangle="74, 78, 176, 19" ElementType="Text" Guid="0a67e385-e686-419c-93e2-1ffb92607182" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DelayBefore="5" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="548.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cb90c06c-f400-4ace-aa1d-d527db79d38b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="373, 116, 103, 34" CvTextArea="412, 126, 25, 16" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="375, 119, 100, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='OK' role='push button' automationid='' check:text='OK' /&gt;" Guid="dc22b94a-95e0-4514-bae6-dfa807496315" InformativeScreenshot="4747676b0d7277d8dc76a6109eeab622.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="93, 53, 388, 39" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Cannot save over this system file.  Please choose another filena*' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Cannot save over this system file.  Please choose another filena*' role='text' automationid='' check:text='Cannot save over this system file.  Please choose another filename.' /&gt;" Guid="e4307eed-5d41-49c5-adb7-f658c7a53362" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAYgAAAArCAYAAABivB/SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAA4vSURBVHhe7Z17yBZFG4eFoD+CgigUStIoUVOxg0oRhiKkGYpRGJFCWh4IK4KCIoIOFmaIhAQh/WHYkUKJIqKEwsIiklAKDTNUPGRYmFAIEdt3jc9vv/u5nT28z5evb373Bcv77O7s7NyHmXtmdt/ZQUUQBEEQZIgAEQRBEGSJABEEQRBkiQARBEEQZIkAEQRBEGSJABEEQRBkiQARBEEQZIkAEQRBEGTpChB//fVX8c477xRXX311cdZZZxWDBg1K29SpUzspBhY7d+4svv76685e0Ib9+/cXn376aWfvBEeOHCkuueSSYtOmTZ0jJ7N79+7kC3Vp+pOcHP3J77//Xjz22GPFueeeW9aT66+/vnO2KPbs2VOMGDEi/f2neemll8p7arv44ovTceow/Prrr8UNN9xQfPbZZ2n/3wR6RJbgZPB5fN9y3333pe1U0BUgHn/88eK8884rNmzYUPzxxx+dowOX55577pQp5kxl48aNXQ0ZtAkQf/75Z3HgwIEB4xc5OfqTVatWFdddd11x+PDhzpFuFFD5+09D42llxzZvvvlm6tS999576Vgbmw5UIkDkOX78eHHllVeeZNN+CRA//vhjcc455xQffvhh58jA51Qq5kzFNy7wb2xMcnL0J4yq6xqx/gwQ4s477yzrQwSIM48qm/ZLgHjttddSdCJK1fHyyy+Xw1p6LAxjmeoRFH7w4MHF7Nmzy+E3w9+33nqrk+JE5SEY3XLLLcUFF1yQ0pCWXpmGyEBv6NJLLy3vdeONNxY//PBDqSiVg419jnt++umnYtq0aV1ppWCCop1K414q5+eff57O7dq1K+0LRlkzZ85M5aQslIl7DxkypCxfFUyHjR8/vrwfvzVF9sorr2RlQI+PPPJI+o0+Lr/88uKyyy4rLrzwwjTFwVQHSCcLFy5MOs3lRcXTvbVhC12LnrAVx7HH008/XdpDaaQ77nvXXXd16a+qUuMfo0aNKtOxoVf06B173759yTfQf5XtquSANjq67bbbuuR8+OGHi2eeeaYYOXJkOnb22WcX999/f3mdRQ1/1aZyKJ32NSV10UUXFcOGDUu+pt5+X6kKEPa4txfU6QYefPDBUg50MHfu3GQD8cknn5R6Y7M+Jt9GNvKeN29e8csvv6RzOUjv7ShdcXzSpEld9rj77ru7ylpXlwC/RR9qX8jDlonz+DfHlYf1xSZdeegwKB98yvsPeU+ePLlr+h45bdtJ2SijykTZkYGyYkflr03l5e/o0aPLvNloi6ztmtoq8rj55ptLncpvygBBw7d06dLOXjuYbli2bFnK9NixY+kYGSPYd999lwRjW7duXar0VH5Q5dm8eXMaHgPOh2Bffvll2t+yZUtx/vnnp4YCdK8xY8YUR48eTccQSkqqYsGCBcWSJUvK+1RBOd9///1knK+++irJQ6NG0BLcl3llgimBFCd+4YUXSjkfeOCBdCwXZJmLRp633347paU8a9asSVN6nFPDaBsNjerQyfbt25PjffPNN+kcxsd5VT41CEy71VXMXOOia1evXl3a0dvDNzjcd8qUKcVvv/2W9qvwerIgK50J68joFh2j6zrb5eRoqyOes2mqTHKiN00Xffvtt6lclKUK7k0ZhA8Ift/r66OPPkq+Rpn7Sk52sMe9vZp048GHpk+fXtx6661pn/TohDri8edoGLkW++VgDp30K1asyNoWGajXVfZoqktAWuRTAyx56JRyDb6Hfvx8PvRVVx7KQPqnnnqqc6RI8hBwVTfxAzoqdACBMlG2RYsWlT5CwEMmye1tKsgb2fbu3Zv20dvYsWNTmw5t2irlYQMWlAGCBGx95fvvv++qCBQeIRBG/Pzzz6nnIcF85QEKfe2115aVLleegwcPpuCjfNqUmci+fPnyzl49vgw4hFUiwWrwfxwVh9m2bVsqC2US6ILGhobdQ56MtriHIF9GbbofFcpWKkYVuj8NGFMIFiqFXiCoch6PbURE7lqvC5+G3uYdd9zRJU8OHpYOHz48VWaPAi5yCiqMHLvOdjk5etGRl1PQWarzLe5tr/E+bfdlZ56bCN2XEXlfyckOyI5dwMvapJscTDeTB3lptL1169bO2f+CXH72gWuxO/b3IHPdbIXXLVh7cK6uLnGc8z4P6iwyMHqlDOPGjcuOCnrRlYf01ka5tsrqlzLRYfAzFpRFsub8F3J52/u3aatyeUAZIHCsNiMIohqVmIrNxpCyKUB4wXxlEtYxck4C9niVUJaPP/44KX7GjBkpEtveNb8feuihUhY20ip/ehIoEQUDUz1qwMmLCm6dVHLSK/VUldUep1cjQ5IvUzDqtaBzjG5Bn6qEVc7jQTbruFB1rdW1T0OvjqE3AezFF19MD7CrWLt2bdLr7bffnmS0D7oJBgqCGjFJ33W2y8nRq45yvlZlL+Gv8T5t9zU6pFJayF8Nel/wsqNPbICvSjYva5Nu4IMPPkijHNUFOnXkQV74I3UFe1Bu3qZR7z83+4DctgGy9FW3YK+pul7Hq+xsj9PJY1qGqb6VK1d29Zzb6MqCbujkTJgwodQd9djaKFdm8pR+7W+LPV4lVy5v6yNt2qpcHlAGiKaoDgzHGPIwT6+btRlBeMFs5bFYx8g5CdjjVUJ5qEA49Jw5c5KDf/HFF+k4w2fm0TWkQybbm2SfRpoKIBk05UUa8pJD2C33amFVWe1xO4VFT4JhrioYcuN0/l70Lk5HgAAaCHqUixcvTrp44403OmdOhqkrggPBgMCiqQCCMNfy146YRJXtcnL0qiMrp6iyl/DXeJ+2+/pNZ8qX7Yknnkjp+wL3JT9tNMRXXHFF8e6775b10svapBumVfE367u2hyuYvsA/aVivuuqq5LPoiWt93myys6WvugV7TdX1Ol5lZ38cXe3YsSPZAN/SlFCTrjy0h+Rrg4ztwUOuzJRD+rW/LfZ4lVy5vG394HdTW5XLA8oAod6yGsAcOSF8xcil8YL5a4R1DHpWfpinfBT12o56LBqGVynbOyeNFop89dVX018qBDCs5hmF5uybyAVgHBSns9MMjFIISs8//3z5MBwot6ZeclTJ4+FeVb2JOl005c9QuM0QXFMBkplyICcPiu2IKYdsBzk5etWRtzlUVRjhr/E+bfc1NarnOf8r3Jf71+FlbdJNLk+uJQ/y8kgm6iK2p9fdllxdsDTZI3e9r0v4IuWyaBonN6qhPmuE0KQrT85XvD5zaax+KZOdrRDko3pF2Sijf9O06f5t2qpcHlAGCBTMQxKGlTwgVsXjwcfrr7+ehvcKInoYRQ+SnsepCBCUAWNyL8rCvXjrwD6kxhlotHMOnAMZrrnmmtQI4Vz0Vu1DUHpHEydO7HJOVYShQ4d2OZwetNFT0PX0dg8dOtTVaAl6Uoy+lJ409DzsgzXAQZiO4CGcnbPmN2ntmxrIo2kXr+MqqNDkb+c6q6619qjLH7mpVFUPJS3YHL0xmhD8xq+wt5+DFdZ2kJOjVx01NUg5/DXep+0+tp4/f356CKiycAxfQXdA7xNfb3roD9xXlb8KL2uTbrAB+tSDWcrFw3zyIC8PIznsRZvANbauAo2RHjJ7VBeYFiM99YGXWiR7kz3a1CVGOVZe8ma2QA+pLeRB26LRa5OuPPgketIDb2SnrbA2yvkTtpF+KRNlsz6CT3AeWQTBgs6UlSGXt/WRNm1VLg8oAwTwwObZZ59NDSLOraHrk08+mRRHZvbVMNLdc8896a8qhhVaeGf1lUl4x8Bpc6+5CuYR9RokQ1zb0Ary5Dwb5bavy9HI6LU9ztEL4p+fvHPS8HF/KoOFeXibP3nde++9lZEah6t7NQ8UuDAo8gl0zxSOyivbrF+/Pp33Oq4C2fV6KjIzxKy61trDp8GZJIdsY8srdJ3SYif7+ixoas2OmKDOdjk5etWR9zuoqjDCX+N92u/TQPHqI2XlOHpgvl8+RV42fR2k5f51eFmbdGP1yXnqHaNz8iAvyaONOm8bLuqSfZWZ6bS6l0N4vmTrHrqQ/7SxR1NdQl7yUFvGPexrrtK3vV5TRE268th2SHnRIbA2yvkTtpF+gbJVveYqbJs1a9asdCyXt/eRprYqlwd0BYggOB2oMbNvMwVBcPqJABGcVugdMdUw2I2YgiA4/USACE4bDGk13GXoHATBwCICRBAEQZAlAkQQBEGQJQJEEARBkCUCRBAEQZAlAkQQBEGQpStA+H/UYLP/PME/I1WtRxIEQRCcWXQFCP5j2C5e5/H/+RcEQRCcuZQBQgtB+WUILBEggiAI/n9IAYKGX1NKfrMBwQcI1m+p+4wi64Gw5jrrrGjaivVa+JKchQWodD/WqPGf62MNkZtuuqnrE4RMhfEfuPYzeyzfbf8bV1NmlI9/xsqtfRQEQRDkKUcQWg/HjiB8QPD7rGJY9xlFAgRfbdLHZFhJ8NFHH61depYF9/zn+ggQrI6oa/QJQhYTq/rMHjBlZldrpTyxpEMQBEE7eg4QrDrKmux2SWrW1WGNfq3J7lcUBP+BoRz+Yxv8Ji8LwcGvPmiv0zLddn11ffo0lnUIgiBopucA0eYzirkA4ZdBJqg0fa4vFyC4jw8Q9n58nIVgQFCwcF4BLAiCIKim5wChhr7uM4ptAkSbz/X1EiAoK88lmK7y5ePrcEEQBEE9PQeINp9RbBMgmhp66CVA6MtsjHSCIAiCvtNzgGBqqOkzim0CRJvP9fUSIHgLik9ULlu2rCwPD6t5YK6H1nwMny0IgiA4mZ4DBLT5jGJTgGjzub5eAgQQdHj1VZ9RZMTDZ0X1FhNpffmCIAiCE5QBIgiCIAgsESCCIAiCLBEggiAIgiwRIIIgCIIsESCCIAiCDEXxN355ybOQ8qFBAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="548.8,660" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <Sequence sap:VirtualizedContainerService.HintSize="512,396.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="449.6,306.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Workbook="[Excel_Workbook]" WorkbookPath="[in_str_LeadsheetExcelpath]">
+                    <ui:ExcelApplicationScope.Body>
+                      <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,172" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ExcelCloseWorkbook DisplayName="Close Workbook" sap:VirtualizedContainerService.HintSize="353.6,83.2" sap2010:WorkflowViewState.IdRef="ExcelCloseWorkbook_1" Workbook="[Excel_Workbook]" />
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ExcelApplicationScope.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:ExcelApplicationScope>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="515.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="548.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="548.8,159.2" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="Excel">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:KillProcess>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 1920, 1020" FilePath="C:\SurePrepLocalFiles\SPbinder\spbinder.exe" IconBase64="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" InformativeScreenshot="eb27b8cae7a2a93ee8ce7205ba859c5b.png" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (K1_KR_00170124842 (V1)) | 1040 | 2023*' /&gt;" Title="SPbinder - Anderson, Jack (K1_KR_00170124842 (V1)) | 1040 | 2023*" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

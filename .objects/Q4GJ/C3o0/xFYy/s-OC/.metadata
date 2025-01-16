@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Check Manual Entity Presence",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "s-OCPish3EKAUGrDfGfrTA",
+  "Reference": "APixl5zDiE65j3fy1g4dKg/s-OCPish3EKAUGrDfGfrTA",
+  "ParentRef": "APixl5zDiE65j3fy1g4dKg/xFYyVz-hnEGvIbR9u_5X3g",
+  "Created": "2024-11-22T15:34:36.4568723Z",
+  "Updated": "2024-11-22T15:34:36.4568723Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
