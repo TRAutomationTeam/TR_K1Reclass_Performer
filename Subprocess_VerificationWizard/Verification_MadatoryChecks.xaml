@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>998.4000000000001,4224.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>998.4000000000001,4580.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Verification_PreValidation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -120,7 +120,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Verification_PreValidation" sap:VirtualizedContainerService.HintSize="757.6,4160" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Verification_PreValidation" sap:VirtualizedContainerService.HintSize="757.6,4516" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_Taxyear" />
       <Variable x:TypeArguments="x:String" Name="str_IdentificationNo" />
@@ -189,13 +189,13 @@
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="695.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Mandatory data selection - Tax Year | Identification No | Partner Name - &quot;+str_Taxyear+&quot; | &quot;+str_IdentificationNo+&quot; | &quot;+str_PartnerName]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 1040SCAN : Verification (EngagementID : 33362127, Domain : Automation-01, SP Client" sap:VirtualizedContainerService.HintSize="695.2,3592" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="a8b1ac8c-4613-4ad9-b4dd-58ef3af59fef" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 1040SCAN : Verification (EngagementID : 33362127, Domain : Automation-01, SP Client" sap:VirtualizedContainerService.HintSize="695.2,3948" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="a8b1ac8c-4613-4ad9-b4dd-58ef3af59fef" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="661.6,3277.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="661.6,3633.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="pageNo" />
             </Sequence.Variables>
@@ -262,7 +262,7 @@
               </uix:NClick.Target>
             </uix:NClick>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="599.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Tax Yr Selection - &quot;+str_Taxyear]" />
-            <Switch x:TypeArguments="x:String" DisplayName="Mandatory Filling" Expression="[in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString]" sap:VirtualizedContainerService.HintSize="599.2,1288.8" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <Switch x:TypeArguments="x:String" DisplayName="Mandatory Filling" Expression="[in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString]" sap:VirtualizedContainerService.HintSize="599.2,1644.8" sap2010:WorkflowViewState.IdRef="Switch`1_1">
               <Sequence x:Key="1040" sap:VirtualizedContainerService.HintSize="416,584" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -286,17 +286,17 @@
                   </uix:NTypeInto.Target>
                 </uix:NTypeInto>
               </Sequence>
-              <Sequence x:Key="1041" sap:VirtualizedContainerService.HintSize="559.2,1044.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence x:Key="1041" sap:VirtualizedContainerService.HintSize="559.2,1400.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="496.8,168.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_3" InteractionMode="HardwareEvents" MovementUnits="4" Version="V4" />
-                <Switch x:TypeArguments="x:String" DisplayName="State Selection" Expression="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" sap:VirtualizedContainerService.HintSize="496.8,56.8" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                <Switch x:TypeArguments="x:String" DisplayName="State Selection" Expression="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" sap:VirtualizedContainerService.HintSize="496.8,654.4" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -304,9 +304,10 @@
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="State Selection" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="State Selection" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -318,23 +319,16 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53c3d24b-f562-4d56-b39b-0b4a0d60b70b" InformativeScreenshot="5d4661e6a6002e3f883322240a299ac5" Selector="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='83' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53c3d24b-f562-4d56-b39b-0b4a0d60b70b" InformativeScreenshot="5d4661e6a6002e3f883322240a299ac5" Selector="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='83' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" TimeoutMS="7">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="NY " sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="NY">
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="NY " sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="NY">
                       <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6b1698ed-07a3-4763-b081-7e25eb2f0e9c" InformativeScreenshot="8cf2684d93b621b6311b01d0e7badc4c" Selector="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='83' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" WaitForReady="NONE">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                        </ui:Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6b1698ed-07a3-4763-b081-7e25eb2f0e9c" InformativeScreenshot="8cf2684d93b621b6311b01d0e7badc4c" Selector="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='83' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" TimeoutMS="7" WaitForReady="NONE" />
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
                   </Sequence>
@@ -382,14 +376,14 @@
                     <uix:TargetAnchorable DesignTimeRectangle="54, 711, 184, 30" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd aaname='8      Net short-term capital gain (loss)' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd aaname='8      Net short-term capital gain (loss)' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" Guid="019eaaae-e6fb-413d-962b-e726d76e3245" InformativeScreenshot="5d36f7e1f067379a603c6b8b012ead5f.png" ScopeSelectorArgument="&lt;wnd app='spreviewwizard.exe' ctrlname='SPVContainer' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
                   </uix:NTypeInto.Target>
                 </uix:NTypeInto>
-                <Switch x:TypeArguments="x:String" DisplayName="Type Into 'F Partners name'" Expression="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" sap:VirtualizedContainerService.HintSize="496.8,478.4" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+                <Switch x:TypeArguments="x:String" DisplayName="Type Into 'F Partners name'" Expression="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" sap:VirtualizedContainerService.HintSize="496.8,236.8" sap2010:WorkflowViewState.IdRef="Switch`1_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence x:Key="CCH Axcess Tax" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence x:Key="CCH Axcess Tax" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -427,6 +421,17 @@
                     </uix:NTypeInto>
                   </Sequence>
                   <uix:NTypeInto x:Key="Lacerte" ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'F Partners name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="a8b1ac8c-4613-4ad9-b4dd-58ef3af59fef" Text="[str_PartnerName_1041]" Version="V4">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable CVScreenId="50158d5e-997b-431c-9138-ddd717f1002d" CvElementArea="57, 793, 494, 25" CvType="InputBox" DesignTimeRectangle="54, 793, 498, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='69' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" Guid="4b6fe8e4-3545-4e64-bdfa-44c62753061a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAfYAAAAdCAYAAABYH05JAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHLSURBVHhe7do/a1NhFMBhP6KDk5/DL6HoopNVaAqdFeKkIIq0hYzdBCENqM2/29zkJtAY0hxzIxXTVjRTbl+e4VkOnLP+hve9MxwOAwBIw++w53keg8EAALgFsiyLXq8X/X5/1fC1sJeD0mg0iqIoYjweAwAVVva7DHu73V6F/sawz2azuJidLfUAgAr7cf4r5qenp9fDfjlYLBYR43rEcBcAqLD5+FNMJpP/CHvxOiJ/CQBU2Lz4uEnYXwAAFTYvPgg7AKRC2AEgIcIOAAkRdgBIiLADQEKEHQASIuwAkBBhB4CECDsAJETYASAhwg4ACdks7GfPYvjtcTSbT2JULl85BgBs12Zh//4g3ry7G/ef34u3y+Uy7jcdBQC2Y7OwZ0/j7OvD+PzlUeTl8pVjAMB2bfjGvhOLwU7MlxY3HAMAtsvnOQBIyD/DXppOp3Exfr+M+ysAoMJmRWMV8r+GvdvtRrPZjOn5JBYXMwCgwkajPFqtVrTb7ethz/M8Tk5OYn9/P2q1WtR2dwGACtvb24t6vR5Zlq06vhb2UqfTiUajEYeHh3FwcAAAVNjR0VEcHx+vRX0t7KXLt3YA4Hb4s+OltbADALfZMH4CI024Hk2mA7IAAAAASUVORK5CYII=" InformativeScreenshot="a519fb97741e605ead3cb16efe58fc34.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='spreviewwizard.exe' ctrlname='SPVContainer' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="50158d5e-997b-431c-9138-ddd717f1002d" CvTextArea="55, 766, 138, 15" CvTextArgument="F Partners name" CvType="Text" DesignTimeRectangle="54, 761, 141, 24" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.STATIC.*' title='F     Partners name' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.STATIC.*' title='F     Partners name' check:text='F     Partners name' /&gt;" Guid="3a5904a7-a8bc-43ed-a01d-02330ac70b0a" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto x:Key="UltraTax CS " ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'F Partners name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="a8b1ac8c-4613-4ad9-b4dd-58ef3af59fef" Text="[str_PartnerName_1041]" Version="V4">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable CVScreenId="50158d5e-997b-431c-9138-ddd717f1002d" CvElementArea="57, 793, 494, 25" CvType="InputBox" DesignTimeRectangle="54, 793, 498, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='69' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.EDIT.*' /&gt;" Guid="4b6fe8e4-3545-4e64-bdfa-44c62753061a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAfYAAAAdCAYAAABYH05JAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHLSURBVHhe7do/a1NhFMBhP6KDk5/DL6HoopNVaAqdFeKkIIq0hYzdBCENqM2/29zkJtAY0hxzIxXTVjRTbl+e4VkOnLP+hve9MxwOAwBIw++w53keg8EAALgFsiyLXq8X/X5/1fC1sJeD0mg0iqIoYjweAwAVVva7DHu73V6F/sawz2azuJidLfUAgAr7cf4r5qenp9fDfjlYLBYR43rEcBcAqLD5+FNMJpP/CHvxOiJ/CQBU2Lz4uEnYXwAAFTYvPgg7AKRC2AEgIcIOAAkRdgBIiLADQEKEHQASIuwAkBBhB4CECDsAJETYASAhwg4ACdks7GfPYvjtcTSbT2JULl85BgBs12Zh//4g3ry7G/ef34u3y+Uy7jcdBQC2Y7OwZ0/j7OvD+PzlUeTl8pVjAMB2bfjGvhOLwU7MlxY3HAMAtsvnOQBIyD/DXppOp3Exfr+M+ysAoMJmRWMV8r+GvdvtRrPZjOn5JBYXMwCgwkajPFqtVrTb7ethz/M8Tk5OYn9/P2q1WtR2dwGACtvb24t6vR5Zlq06vhb2UqfTiUajEYeHh3FwcAAAVNjR0VEcHx+vRX0t7KXLt3YA4Hb4s+OltbADALfZMH4CI024Hk2mA7IAAAAASUVORK5CYII=" InformativeScreenshot="a519fb97741e605ead3cb16efe58fc34.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='spreviewwizard.exe' ctrlname='SPVContainer' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>

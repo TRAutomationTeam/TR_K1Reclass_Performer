@@ -1,8 +1,9 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Seq_K1ReclassButtonFunctionalityForActivities_" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Str_TC17_Status" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1925.5999999999997,7740</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>998.4000000000001,3583.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,19 +120,19 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1936,7675.2" sap2010:WorkflowViewState.IdRef="Sequence_141">
+  <Sequence sap:VirtualizedContainerService.HintSize="764,3518.4" sap2010:WorkflowViewState.IdRef="Sequence_141">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="TC_17 Verify K1 Reclass Button functionality for activities." AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 | Binder ID: 336561" sap:VirtualizedContainerService.HintSize="625.6,1388" sap2010:WorkflowViewState.IdRef="NApplicationCard_15" ScopeGuid="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="TC_17 Verify K1 Reclass Button functionality for activities." AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 | Binder ID: 336561" sap:VirtualizedContainerService.HintSize="701.6,3429.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_15" ScopeGuid="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1065.6" sap2010:WorkflowViewState.IdRef="Sequence_105">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="668,3084" sap2010:WorkflowViewState.IdRef="Sequence_105">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_DescriptionText" />
               <Variable x:TypeArguments="s:String[]" Name="arr_FormName" />
@@ -143,7 +144,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message - K1 reclass button" sap:VirtualizedContainerService.HintSize="529.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_64" Level="Info" Message="[&quot;*************TC_17 -Verify K1 Reclass Button functionality For activities Started*************&quot;]">
+            <ui:LogMessage DisplayName="Log Message - K1 reclass button" sap:VirtualizedContainerService.HintSize="605.6,84.8" sap2010:WorkflowViewState.IdRef="LogMessage_64" Level="Info" Message="[&quot;*************TC_17 -Verify K1 Reclass Button functionality For activities Started*************&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -151,7 +152,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="title" DisplayName="Get Attribute 'SPbinder -'" sap:VirtualizedContainerService.HintSize="529.6,56.8" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[str_Title]" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="title" DisplayName="Get Attribute 'SPbinder -'" sap:VirtualizedContainerService.HintSize="605.6,84.8" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[str_Title]" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
               <uix:NGetAttributeGeneric.Target>
                 <uix:TargetAnchorable CvTextArea="29, 8, 671, 12" CvTextArgument="SPbinder - ANDERSON, JACK (APN_28082024_03) I 1040 I 2022 Binder ID: 33473680 Automation-01 GoSystem Tax RS" CvType="Text" DesignTimeRectangle="30, 6, 669, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='SPbinder - *' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Bind*' role='text' automationid='' check:text='SPbinder - ANDERSON, JACK (APN_28082024_03) | 1040 | 2022 | Binder ID: 33473680 | Automation-01 |' /&gt;" Guid="b11cc258-7d4f-4d8e-a269-674aafef9c5c" InformativeScreenshot="2aefe893e6be3d01466f4bff58f669f7.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NGetAttributeGeneric.Target>
@@ -162,7 +163,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetAttributeGeneric>
-            <ui:IfElseIfV2 Condition="[str_Title.ToLower.Contains(&quot;cch&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="529.6,692.8" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+            <ui:IfElseIfV2 Condition="[str_Title.ToLower.Contains(&quot;cch&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="605.6,2655.2" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
               <ui:IfElseIfV2.Else>
                 <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,369.6" sap2010:WorkflowViewState.IdRef="Sequence_123">
                   <sap:WorkflowViewStateService.ViewState>
@@ -184,24 +185,34 @@
               </ui:IfElseIfV2.Else>
               <ui:IfElseIfV2.ElseIfs>
                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
-                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[str_Title.ToLower.Contains(&quot;go&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[str_Title.ToLower.Contains(&quot;go&quot;)]" DisplayName="If else if block" sap:VirtualizedContainerService.HintSize="334.4,24.799999999999997" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_122">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="572,1928.8" sap2010:WorkflowViewState.IdRef="Sequence_122">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="494.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_14">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">[strFormName]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">Schedule K-1</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                        <TryCatch DisplayName="Try Catch - SPBinder_Navigation" sap:VirtualizedContainerService.HintSize="494.4,1488" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                        <Switch x:TypeArguments="x:String" DisplayName="Form Name based on engagement" Expression="[in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString]" sap:VirtualizedContainerService.HintSize="509.6,324" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                          <Assign x:Key="1040" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_23">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[strFormName]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">Schedule K-1</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign x:Key="1041" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_24">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[strFormName]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">K-1 Income</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Switch>
+                        <TryCatch DisplayName="Try Catch - SPBinder_Navigation" sap:VirtualizedContainerService.HintSize="509.6,1516" sap2010:WorkflowViewState.IdRef="TryCatch_8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -209,10 +220,10 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <ui:RetryScope DisplayName="Retry SPBinder_Navigation" sap:VirtualizedContainerService.HintSize="457.6,1233.6" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="3">
+                            <ui:RetryScope DisplayName="Retry SPBinder_Navigation" sap:VirtualizedContainerService.HintSize="457.6,1261.6" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="3">
                               <ui:RetryScope.ActivityBody>
                                 <ActivityAction>
-                                  <Sequence DisplayName="SPBinder_Navigation" sap:VirtualizedContainerService.HintSize="416,1057.6" sap2010:WorkflowViewState.IdRef="Sequence_125">
+                                  <Sequence DisplayName="SPBinder_Navigation" sap:VirtualizedContainerService.HintSize="416,1085.6" sap2010:WorkflowViewState.IdRef="Sequence_125">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="uieSPBinderEntityPanel" />
                                       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="uieSPBinderActivityPanel" />
@@ -272,7 +283,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:LogMessage>
-                                    <uix:NCheckState DisplayName="Check App State Entity Panel or Activity Panel" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
+                                    <uix:NCheckState DisplayName="Check App State Entity Panel or Activity Panel" sap:VirtualizedContainerService.HintSize="353.6,76" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
                                       <uix:NCheckState.IfExists>
                                         <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,916.8" sap2010:WorkflowViewState.IdRef="Sequence_135">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -768,7 +779,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:IfElseIfV2.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_121">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_121">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1363,7 +1374,7 @@
                 </Sequence>
               </ui:IfElseIfV2.Then>
             </ui:IfElseIfV2>
-            <ui:LogMessage DisplayName="Log Message - K1 reclass button" sap:VirtualizedContainerService.HintSize="529.6,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_65" Level="Info" Message="[&quot;*************TC_17 -Verify K1 Reclass Button functionality For activities Ended*************&quot;]">
+            <ui:LogMessage DisplayName="Log Message - K1 reclass button" sap:VirtualizedContainerService.HintSize="605.6,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_65" Level="Info" Message="[&quot;*************TC_17 -Verify K1 Reclass Button functionality For activities Ended*************&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
