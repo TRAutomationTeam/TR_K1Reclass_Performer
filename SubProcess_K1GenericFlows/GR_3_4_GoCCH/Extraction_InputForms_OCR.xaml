@@ -14,11 +14,12 @@
     <x:Property Name="out_TC_39" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_UltraSelector_Classic_path" Type="InArgument(x:String)" />
     <x:Property Name="in_LacerteSelector_Classic_path" Type="InArgument(x:String)" />
+    <x:Property Name="in_transactionItem" Type="InArgument(ui:QueueItem)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,9968</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>998.4000000000001,9709.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Extraction_InputForms_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -144,7 +145,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Performing the following functions.&#xA;1.Extraction of input form fields.&#xA;2.Building a data table from the extracted information.&#xA;3.Writing the data table." DisplayName="Extraction_InputForms" sap:VirtualizedContainerService.HintSize="940.8,9903.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Performing the following functions.&#xA;1.Extraction of input form fields.&#xA;2.Building a data table from the extracted information.&#xA;3.Writing the data table." DisplayName="Extraction_InputForms" sap:VirtualizedContainerService.HintSize="940.8,9644.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="int_RowIndex" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_InputSelector" />
@@ -158,33 +159,33 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:IfElseIf sap2010:Annotation.AnnotationText="Branching for Reading selector information based on Tax Software." DisplayName="Navigation_Branching_TaxSoftware" sap:VirtualizedContainerService.HintSize="878.4,116.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+    <ui:IfElseIf sap2010:Annotation.AnnotationText="Branching for Reading selector information based on Tax Software." DisplayName="Navigation_Branching_TaxSoftware" sap:VirtualizedContainerService.HintSize="878.4,1096.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
       <ui:IfElseIf.ConditionBlocks>
         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
           <ui:IfElseIfBlock BlockType="If" Condition="[in_str_TaxSoftware=&quot;CCH&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
             <ui:IfElseIfBlock.Then>
-              <ui:ReadRange AddHeaders="True" DataTable="[dt_InputSelector]" DisplayName="ReadRange_CCH" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ReadRange_7" Range="A3:D10" SheetName="[in_str_EntityType]" WorkbookPath="[in_CCHSelector_Classic_path]" />
+              <ui:ReadRange AddHeaders="True" DataTable="[dt_InputSelector]" DisplayName="ReadRange_CCH" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_7" Range="A3:D10" SheetName="[in_str_EntityType]" WorkbookPath="[in_CCHSelector_Classic_path]" />
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
           <ui:IfElseIfBlock BlockType="ElseIf" Condition="[in_str_TaxSoftware=&quot;GO&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
             <ui:IfElseIfBlock.Then>
-              <ui:ReadRange AddHeaders="True" DataTable="[dt_InputSelector]" DisplayName="ReadRange_GO" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ReadRange_8" Range="A3:D10" SheetName="[in_str_EntityType]" WorkbookPath="[in_GOSelector_Classic_path]" />
+              <ui:ReadRange AddHeaders="True" DataTable="[dt_InputSelector]" DisplayName="ReadRange_GO" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_8" Range="A3:D10" SheetName="[in_str_EntityType]" WorkbookPath="[in_GOSelector_Classic_path]" />
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
           <ui:IfElseIfBlock BlockType="ElseIf" Condition="[in_str_TaxSoftware=&quot;ULTRA&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_3">
             <ui:IfElseIfBlock.Then>
-              <ui:ReadRange AddHeaders="True" DataTable="[dt_InputSelector]" DisplayName="ReadRange_ULTRA" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ReadRange_5" Range="A3:D10" SheetName="[in_str_EntityType]" WorkbookPath="[in_UltraSelector_Classic_path]" />
+              <ui:ReadRange AddHeaders="True" DataTable="[dt_InputSelector]" DisplayName="ReadRange_ULTRA" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_5" Range="A3:D10" SheetName="[in_str_EntityType]" WorkbookPath="[in_UltraSelector_Classic_path]" />
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
           <ui:IfElseIfBlock BlockType="ElseIf" Condition="[in_str_TaxSoftware=&quot;LACERTE&quot;]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_4">
             <ui:IfElseIfBlock.Then>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,199" sap2010:WorkflowViewState.IdRef="Sequence_58">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,200" sap2010:WorkflowViewState.IdRef="Sequence_58">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ReadRange AddHeaders="True" DataTable="[dt_InputSelector]" DisplayName="ReadRange_LACERTE" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ReadRange_6" Range="A3:D7" SheetName="[in_str_EntityType]" WorkbookPath="[in_LacerteSelector_Classic_path]" />
+                <ui:ReadRange AddHeaders="True" DataTable="[dt_InputSelector]" DisplayName="ReadRange_LACERTE" sap:VirtualizedContainerService.HintSize="353.6,111.2" sap2010:WorkflowViewState.IdRef="ReadRange_6" Range="A3:D7" SheetName="[in_str_EntityType]" WorkbookPath="[in_LacerteSelector_Classic_path]" />
               </Sequence>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
@@ -193,18 +194,18 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:IfElseIf>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="SP_Binder" sap:VirtualizedContainerService.HintSize="878.4,9621.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="aca8fc3b-2e13-4100-9c89-99b0f91462ad" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="SP_Binder" sap:VirtualizedContainerService.HintSize="878.4,8383.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="aca8fc3b-2e13-4100-9c89-99b0f91462ad" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="844.8,9307.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="844.8,8068.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_FormsValue" />
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ui_Children" />
@@ -217,7 +218,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:IfElseIf sap2010:Annotation.AnnotationText="Branching for Reading selector information based on Tax Software." DisplayName="Branching_SectionNavigation" sap:VirtualizedContainerService.HintSize="782.4,1776.8" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+            <ui:IfElseIf sap2010:Annotation.AnnotationText="Branching for Reading selector information based on Tax Software." DisplayName="Branching_SectionNavigation" sap:VirtualizedContainerService.HintSize="782.4,3043.2" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
               <ui:IfElseIf.ConditionBlocks>
                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="If" Condition="[in_str_TaxSoftware=&quot;CCH&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_5">
@@ -331,14 +332,14 @@
                   </ui:IfElseIfBlock>
                   <ui:IfElseIfBlock BlockType="ElseIf" Condition="[in_str_TaxSoftware=&quot;LACERTE&quot;]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_8">
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="LACERTE" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                      <Sequence DisplayName="LACERTE" sap:VirtualizedContainerService.HintSize="515.2,1291.2" sap2010:WorkflowViewState.IdRef="Sequence_62">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NDragAndDrop CursorMotionType="Smooth" DelayBefore="10" DelayBetweenActions="0.3" DestinationScopeIdentifier="aca8fc3b-2e13-4100-9c89-99b0f91462ad" DisplayName="Drag and Drop 'indicator'" sap:VirtualizedContainerService.HintSize="388,228" sap2010:WorkflowViewState.IdRef="NDragAndDrop_5" ScopeIdentifier="aca8fc3b-2e13-4100-9c89-99b0f91462ad" Version="V3">
+                        <uix:NDragAndDrop CursorMotionType="Smooth" DelayBefore="10" DelayBetweenActions="0.3" DestinationScopeIdentifier="aca8fc3b-2e13-4100-9c89-99b0f91462ad" DisplayName="Drag and Drop 'indicator'" sap:VirtualizedContainerService.HintSize="452.8,261.6" sap2010:WorkflowViewState.IdRef="NDragAndDrop_5" ScopeIdentifier="aca8fc3b-2e13-4100-9c89-99b0f91462ad" Version="V3">
                           <uix:NDragAndDrop.DestinationTarget>
                             <uix:TargetAnchorable DesignTimeRectangle="10, 822, 240, 5" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl idx='2' role='indicator' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='' role='indicator' /&gt;" Guid="58be3b24-ec31-4540-8f74-d0399ca5478e" ImageBase64="" InformativeScreenshot="68144e1d6ab95918ec26afb570735cd2.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder -*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                               <uix:TargetAnchorable.PointOffset>
@@ -356,16 +357,41 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NDragAndDrop>
-                        <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="Get Attribute 'Citibank (T)'" sap:VirtualizedContainerService.HintSize="388,207" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_5" Result="[str_InputForm]" ScopeIdentifier="aca8fc3b-2e13-4100-9c89-99b0f91462ad" Version="V3">
+                        <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="Get Attribute 'Citibank (T)'" sap:VirtualizedContainerService.HintSize="452.8,240" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_5" Result="[str_InputForm]" ScopeIdentifier="aca8fc3b-2e13-4100-9c89-99b0f91462ad" Version="V3">
                           <uix:NGetAttributeGeneric.Target>
                             <uix:TargetAnchorable CvTextArea="359, 505, 67, 14" CvTextArgument="Citibank (T)" CvType="Text" DesignTimeRectangle="361, 503, 252, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='textblockSelectedFormName' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='textblockSelectedFormName' role='text' check:text='Citibank (T)' /&gt;" Guid="366727b5-8afd-40f2-b1aa-2e0553f7cc99" ImageBase64="" InformativeScreenshot="7e401fd90d4d8f0b22aa5bf20a0026dc.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder -*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                           </uix:NGetAttributeGeneric.Target>
                         </uix:NGetAttributeGeneric>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Part III - (Lines 1-10) - Partner Share of Current Year Income*'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aca8fc3b-2e13-4100-9c89-99b0f91462ad" Version="V3">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable CvTextArea="17, 850, 52, 12" CvTextArgument="Income" CvType="Text" DesignTimeRectangle="18, 846, 51, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='SectionExpander' /&gt;&lt;ctrl idx='3' name='System.Data.DataRowView' role='list item' /&gt;&lt;ctrl name='Part III - (Lines 1-10) - Partner&amp;apos;s Share of Current Year Income*' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl name='Income' role='text' automationid='' check:text='Income' /&gt;" Guid="ab878b96-32d3-4e2e-b212-ecbf41bdb363" ImageBase64="" InformativeScreenshot="90c1fe895c7b7cd80c2ad5a1278ec826.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder *' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                          </uix:NClick.Target>
-                        </uix:NClick>
+                        <If Condition="[in_transactionItem.SpecificContent(&quot;EngagementType&quot;).Equals(&quot;1040&quot;)]" DisplayName="Click 'Part III - (Lines 1-10) - Partner Share of Current Year Income*'" sap:VirtualizedContainerService.HintSize="452.8,700.8" sap2010:WorkflowViewState.IdRef="If_13">
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Part III - (Lines 1-10) - Partner Share of Current Year Income*'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aca8fc3b-2e13-4100-9c89-99b0f91462ad" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable CvTextArea="17, 850, 52, 12" CvTextArgument="Income" CvType="Text" DesignTimeRectangle="18, 846, 51, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='SectionExpander' /&gt;&lt;ctrl idx='3' name='System.Data.DataRowView' role='list item' /&gt;&lt;ctrl name='Part III - (Lines 1-10) - Partner&amp;apos;s Share of Current Year Income*' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl name='Income' role='text' automationid='' check:text='Income' /&gt;" Guid="ab878b96-32d3-4e2e-b212-ecbf41bdb363" ImageBase64="" InformativeScreenshot="90c1fe895c7b7cd80c2ad5a1278ec826.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder *' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Part III - (Lines 1-10) - Partner Share of Current Year Income*'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aca8fc3b-2e13-4100-9c89-99b0f91462ad" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable CVScreenId="3c7bb114-486f-4ab0-9326-a09dd07a2bc8" CvTextArea="17, 748, 133, 17" CvTextArgument="Income (Loss) (1-11)" CvType="Text" DesignTimeRectangle="18, 746, 133, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='SectionExpander' /&gt;&lt;ctrl idx='3' name='System.Data.DataRowView' role='list item' /&gt;&lt;ctrl name='Income (Loss) (1-11)' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='SectionExpander' /&gt;&lt;ctrl name='System.Data.DataRowView' role='list item' /&gt;&lt;ctrl name='Income (Loss) (1-11)' role='text' automationid='' check:text='Income (Loss) (1-11)' /&gt;" Guid="35d8cd25-9001-4968-9895-dcebafd49da6" ImageBase64="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" InformativeScreenshot="bd474f6836ccd4a75b860d99159471fc.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - * | * | * | *' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V4" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </If.Else>
+                        </If>
                       </Sequence>
                     </ui:IfElseIfBlock.Then>
                   </ui:IfElseIfBlock>
@@ -403,7 +429,7 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="782.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="782.4,84.8" sap2010:WorkflowViewState.IdRef="CommentOut_13">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="694,1899" sap2010:WorkflowViewState.IdRef="Sequence_51">
                   <sap:WorkflowViewStateService.ViewState>
@@ -628,13 +654,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_InputSelector]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="782.4,3269.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_InputSelector]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="782.4,736.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="748.8,3072" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540.8,539.2" sap2010:WorkflowViewState.IdRef="Sequence_50">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Default="18,889" Name="str_InputValue" />
                       <Variable x:TypeArguments="x:String" Default="&lt;ctrl automationid='rpgInputForm' /&gt;&#xA;&lt;ctrl automationid='rpInputForm' /&gt;&#xA;&lt;ctrl automationid='FormsTabItem' /&gt;&#xA;&lt;ctrl role='editable text' helpText='5: Other interest (portfolio)' /&gt;" Name="str_Selector" />
@@ -645,7 +671,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="686.4,149.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,149.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
                       <ui:MultipleAssign.AssignOperations>
                         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
@@ -665,22 +691,22 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:MultipleAssign>
-                    <If Condition="[in_str_TaxSoftware=&quot;CCH&quot;]" sap:VirtualizedContainerService.HintSize="686.4,2617.6" sap2010:WorkflowViewState.IdRef="If_11">
+                    <If Condition="[in_str_TaxSoftware=&quot;CCH&quot;]" sap:VirtualizedContainerService.HintSize="478.4,84.8" sap2010:WorkflowViewState.IdRef="If_11">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="556.8,868.8" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="556.8,788.8" sap2010:WorkflowViewState.IdRef="Sequence_54">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="494.4,780" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="2">
+                          <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="494.4,700" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="2">
                             <ui:RetryScope.ActivityBody>
                               <ActivityAction>
                                 <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452.8,500.8" sap2010:WorkflowViewState.IdRef="TryCatch_5">
@@ -723,13 +749,13 @@
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                         </ActivityAction.Argument>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="563.2,1752" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="528.8,1752" sap2010:WorkflowViewState.IdRef="Sequence_53">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:IfElseIf sap2010:Annotation.AnnotationText="Branching for Reading selector information based on Tax Software." DisplayName="Navigation_Branching_TaxSoftware" sap:VirtualizedContainerService.HintSize="500.8,1549.6" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
+                                          <ui:IfElseIf sap2010:Annotation.AnnotationText="Branching for Reading selector information based on Tax Software." DisplayName="Navigation_Branching_TaxSoftware" sap:VirtualizedContainerService.HintSize="466.4,1549.6" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
                                             <ui:IfElseIf.ConditionBlocks>
                                               <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                                 <ui:IfElseIfBlock BlockType="If" Condition="[in_str_TaxSoftware=&quot;CCH&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_9">
@@ -741,7 +767,7 @@
                                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Deductions'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aca8fc3b-2e13-4100-9c89-99b0f91462ad" Version="V3">
+                                                      <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Deductions'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aca8fc3b-2e13-4100-9c89-99b0f91462ad" Timeout="10" Version="V3">
                                                         <uix:NClick.Target>
                                                           <uix:TargetAnchorable CvTextArea="17, 876, 78, 13" CvTextArgument="Deductions" CvType="Text" DesignTimeRectangle="18, 873, 79, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='SectionExpander' /&gt;&lt;ctrl name='Deductions' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='SectionExpander' /&gt;&lt;ctrl name='Deductions' role='text' automationid='' check:text='Deductions' /&gt;" Guid="f097cbae-600a-4905-9e48-fd436cc89de2" InformativeScreenshot="a703338a866a23c07c0a8e922a0b96fa.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (K1_4493XG) | 1040 | 2022 | Binder ID:*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                                         </uix:NClick.Target>
@@ -804,7 +830,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:IfElseIf>
-                                          <Throw Exception="[exception]" sap:VirtualizedContainerService.HintSize="500.8,113.6" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                                          <Throw Exception="[exception]" sap:VirtualizedContainerService.HintSize="466.4,113.6" sap2010:WorkflowViewState.IdRef="Throw_3" />
                                         </Sequence>
                                       </ActivityAction>
                                     </Catch>
@@ -825,14 +851,14 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="652.8,1578.4" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="652.8,1498.4" sap2010:WorkflowViewState.IdRef="Sequence_57">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="590.4,1489.6" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="2">
+                          <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="590.4,1409.6" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="2">
                             <ui:RetryScope.ActivityBody>
                               <ActivityAction>
                                 <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="548.8,1210.4" sap2010:WorkflowViewState.IdRef="TryCatch_6">
@@ -850,7 +876,7 @@
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[str_Selector.Contains(&quot;&lt;ctrl helpText='13h: Investment int. expense - Schedule A' /&gt;&quot;) Or str_Selector.Contains(&quot;&lt;ctrl helpText='13l: Deductions - portfolio (other)' /&gt;&quot;) Or str_Selector.Contains(&quot;&lt;ctrl name='Item: , Column Display Index: 3' role='client' idx='3' /&gt;&#xD;&#xA;&lt;ctrl idx='1' /&gt;&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,890.4" sap2010:WorkflowViewState.IdRef="If_12">
+                                      <If Condition="[str_Selector.Contains(&quot;&lt;ctrl helpText='13h: Investment int. expense - Schedule A' /&gt;&quot;) Or str_Selector.Contains(&quot;&lt;ctrl helpText='13l: Deductions - portfolio (other)' /&gt;&quot;) Or str_Selector.Contains(&quot;&lt;ctrl name='Item: , Column Display Index: 3' role='client' idx='3' /&gt;&#xA;&lt;ctrl idx='1' /&gt;&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,890.4" sap2010:WorkflowViewState.IdRef="If_12">
                                         <If.Then>
                                           <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,459.2" sap2010:WorkflowViewState.IdRef="Sequence_79">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -1019,7 +1045,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Value" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="686.4,216" sap2010:WorkflowViewState.IdRef="UpdateRowItem_3" Row="[CurrentRow]" Value="[str_InputValue]" />
+                    <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Value" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="478.4,216" sap2010:WorkflowViewState.IdRef="UpdateRowItem_3" Row="[CurrentRow]" Value="[str_InputValue]" />
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>

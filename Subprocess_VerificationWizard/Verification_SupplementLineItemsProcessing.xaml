@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>973.6,4285.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>856.8,4325.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Verification_LineItemsProcessing_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,7 +119,7 @@
       <AssemblyReference>TR_Aut_K1_Reclass_Dispatcher_2023.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Verification_LineItemsProcessing" sap:VirtualizedContainerService.HintSize="769.6,4220.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Verification_LineItemsProcessing" sap:VirtualizedContainerService.HintSize="769.6,4260.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_WizardMapping" />
       <Variable x:TypeArguments="x:String" Name="str_WizardMapping" />
@@ -184,19 +184,19 @@
       </Assign.Value>
     </Assign>
     <ui:LogMessage DisplayName="Line Items Count log" sap:VirtualizedContainerService.HintSize="707.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Line Items picked from mapping selection: &quot;+dt_WizardMapping.Rows.Count.ToString]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_WizardMapping]" DisplayName="Iterate Line Items - Verification Wizard" sap:VirtualizedContainerService.HintSize="707.2,3132.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_WizardMapping]" DisplayName="Iterate Line Items - Verification Wizard" sap:VirtualizedContainerService.HintSize="707.2,3172.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Lines" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="673.6,2944" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="673.6,2984" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 1040SCAN : Verification (EngagementID : 33464205, Domain : Automation-01, SP Client" sap:VirtualizedContainerService.HintSize="611.2,2855.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="9b89d218-c771-4160-985b-df483ea957e4" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 1040SCAN : Verification (EngagementID : 33464205, Domain : Automation-01, SP Client" sap:VirtualizedContainerService.HintSize="611.2,2895.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="9b89d218-c771-4160-985b-df483ea957e4" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -728,7 +728,7 @@
                         <uix:TargetAnchorable DesignTimeRectangle="1908, 538, 22, 422" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='NonClientVerticalScrollBar' idx='87' name='Vertical' role='scroll bar' /&gt;&lt;ctrl automationid='DownPageButton' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='NonClientVerticalScrollBar' name='Vertical' role='scroll bar' /&gt;&lt;ctrl automationid='DownPageButton' role='push button' check:text='Page down' /&gt;" Guid="cff3b335-39ad-4feb-bb09-4c4906654ef3" InformativeScreenshot="36fb3e610898aae15921a8f7499bf87f.png" ScopeSelectorArgument="&lt;wnd app='spreviewwizard.exe' ctrlname='SPVContainer' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V2" Visibility="Interactive" />
                       </uix:NMouseScroll.Target>
                     </uix:NMouseScroll>
-                    <Sequence DisplayName="Gross Total" sap:VirtualizedContainerService.HintSize="512,1317.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence DisplayName="Gross Total" sap:VirtualizedContainerService.HintSize="512,1339.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -855,7 +855,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:CommentOut>
-                      <ui:LogMessage DisplayName="Gross Amount log" sap:VirtualizedContainerService.HintSize="411.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Gross Amount# &quot;+Lines(&quot;GrossTotalAmount&quot;).ToString+&quot; added&quot;]" />
+                      <ui:LogMessage DisplayName="Gross Amount log" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Gross Amount# &quot;+Lines(&quot;GrossTotalAmount&quot;).ToString+&quot; added&quot;]" />
                     </Sequence>
                     <Assign DisplayName="Increment X Axis" sap:VirtualizedContainerService.HintSize="499.2,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
                       <Assign.To>

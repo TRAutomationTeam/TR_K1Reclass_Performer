@@ -9,7 +9,7 @@
     <x:Property Name="Str_TC47_Status" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>3743.1999999999994,28491.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>3743.2,29604</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -138,19 +138,19 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="3753.6,28426.4" sap2010:WorkflowViewState.IdRef="Sequence_141">
+  <Sequence sap:VirtualizedContainerService.HintSize="3753.6,29539.2" sap2010:WorkflowViewState.IdRef="Sequence_141">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="TC_44 Verify export warning modal.&#xA;TC_47 Verify export functionality after clicking Continue." AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 | Binder ID: 336561" sap:VirtualizedContainerService.HintSize="3691.2,28337.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_15" ScopeGuid="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="TC_44 Verify export warning modal.&#xA;TC_47 Verify export functionality after clicking Continue." AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 | Binder ID: 336561" sap:VirtualizedContainerService.HintSize="3691.2,29450.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_15" ScopeGuid="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3657.6,27979.2" sap2010:WorkflowViewState.IdRef="Sequence_105">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3657.6,29092" sap2010:WorkflowViewState.IdRef="Sequence_105">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_DescriptionText" />
               <Variable x:TypeArguments="s:String[]" Name="arr_FormName" />
@@ -181,7 +181,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetAttributeGeneric>
-            <ui:IfElseIfV2 Condition="[str_Title.ToLower.Contains(&quot;cch&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="3595.2,27304" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+            <ui:IfElseIfV2 Condition="[str_Title.ToLower.Contains(&quot;cch&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="3595.2,28416.8" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
               <ui:IfElseIfV2.Else>
                 <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_123">
                   <sap:WorkflowViewStateService.ViewState>
@@ -196,14 +196,14 @@
                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="ElseIf" Condition="[str_Title.ToLower.Contains(&quot;go&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2112,9763.2" sap2010:WorkflowViewState.IdRef="Sequence_122">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2112,10817.6" sap2010:WorkflowViewState.IdRef="Sequence_122">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <TryCatch DisplayName="Try Catch - SPBinder_Navigation" sap:VirtualizedContainerService.HintSize="2049.6,9674.4" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                        <TryCatch DisplayName="Try Catch - SPBinder_Navigation" sap:VirtualizedContainerService.HintSize="2049.6,10728.8" sap2010:WorkflowViewState.IdRef="TryCatch_8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -211,10 +211,10 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <ui:RetryScope DisplayName="Retry SPBinder_Navigation" sap:VirtualizedContainerService.HintSize="2012.8,9012" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="3">
+                            <ui:RetryScope DisplayName="Retry SPBinder_Navigation" sap:VirtualizedContainerService.HintSize="2012.8,10066.4" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="3">
                               <ui:RetryScope.ActivityBody>
                                 <ActivityAction>
-                                  <Sequence DisplayName="SPBinder_Navigation" sap:VirtualizedContainerService.HintSize="1971.2,8836" sap2010:WorkflowViewState.IdRef="Sequence_125">
+                                  <Sequence DisplayName="SPBinder_Navigation" sap:VirtualizedContainerService.HintSize="1971.2,9890.4" sap2010:WorkflowViewState.IdRef="Sequence_125">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="uieSPBinderEntityPanel" />
                                       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="uieSPBinderActivityPanel" />
@@ -225,14 +225,24 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Assign sap:VirtualizedContainerService.HintSize="1908.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_14">
-                                      <Assign.To>
-                                        <OutArgument x:TypeArguments="x:String">[strFormName]</OutArgument>
-                                      </Assign.To>
-                                      <Assign.Value>
-                                        <InArgument x:TypeArguments="x:String">Schedule K-1</InArgument>
-                                      </Assign.Value>
-                                    </Assign>
+                                    <Switch x:TypeArguments="x:String" DisplayName="Form Name based on engagement" Expression="[in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1908.8,556" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+                                      <Assign x:Key="1040" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_58">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[strFormName]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">Schedule K-1</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <Assign x:Key="1041" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_59">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[strFormName]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">K-1 Income</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Switch>
                                     <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - FORMS" sap:VirtualizedContainerService.HintSize="1908.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_51" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
                                       <uix:NClick.Target>
                                         <uix:TargetAnchorable CvElementArea="12, 948, 157, 37" CvTextArea="62, 958, 56, 16" CvTextArgument="FORMS" CvType="Button" DesignTimeRectangle="63, 957, 55, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='FORMS' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl name='FORMS' role='text' automationid='' check:text='FORMS' /&gt;" Guid="03cae289-c946-4516-b8ba-deb3190699dc" InformativeScreenshot="337fea8b9dfb8ee7c6aee431cfe2686d.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete" />
@@ -282,7 +292,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:LogMessage>
-                                    <uix:NCheckState DisplayName="Check App State Entity Panel or Activity Panel" sap:VirtualizedContainerService.HintSize="1908.8,7712.8" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
+                                    <uix:NCheckState DisplayName="Check App State Entity Panel or Activity Panel" sap:VirtualizedContainerService.HintSize="1908.8,8324.8" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
                                       <uix:NCheckState.IfExists>
                                         <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,916.8" sap2010:WorkflowViewState.IdRef="Sequence_135">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -394,7 +404,7 @@
                                         </Sequence>
                                       </uix:NCheckState.IfExists>
                                       <uix:NCheckState.IfNotExists>
-                                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1344,7471.2" sap2010:WorkflowViewState.IdRef="Sequence_136">
+                                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1344,8083.2" sap2010:WorkflowViewState.IdRef="Sequence_136">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -411,13 +421,13 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </uix:NKeyboardShortcuts>
-                                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: SPbinder" sap:VirtualizedContainerService.HintSize="1281.6,7149.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_21" OpenMode="Never" ScopeGuid="a2561c98-dd5b-46d5-9a8b-a8b473d28299" Version="V2">
+                                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: SPbinder" sap:VirtualizedContainerService.HintSize="1281.6,7761.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_21" OpenMode="Never" ScopeGuid="a2561c98-dd5b-46d5-9a8b-a8b473d28299" Version="V2">
                                             <uix:NApplicationCard.Body>
                                               <ActivityAction x:TypeArguments="x:Object">
                                                 <ActivityAction.Argument>
                                                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                 </ActivityAction.Argument>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="1248,6833.6" sap2010:WorkflowViewState.IdRef="Sequence_138">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="1248,7445.6" sap2010:WorkflowViewState.IdRef="Sequence_138">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -438,7 +448,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:FindChildren>
-                                                  <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each currentUiElement" sap:VirtualizedContainerService.HintSize="1185.6,56.8" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[uieSPBinderEntityPanel]">
+                                                  <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each currentUiElement" sap:VirtualizedContainerService.HintSize="1185.6,84.8" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[uieSPBinderEntityPanel]">
                                                     <ui:ForEach.Body>
                                                       <ActivityAction x:TypeArguments="ui:UiElement">
                                                         <ActivityAction.Argument>
@@ -570,7 +580,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </uix:NMouseScroll>
-                                                  <uix:NCheckState DisplayName="Existing row is present or not Check App State 'Item: System.Data.DataR…'" sap:VirtualizedContainerService.HintSize="1185.6,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_182" ScopeIdentifier="a2561c98-dd5b-46d5-9a8b-a8b473d28299" Timeout="5" Version="V3">
+                                                  <uix:NCheckState DisplayName="Existing row is present or not Check App State 'Item: System.Data.DataR…'" sap:VirtualizedContainerService.HintSize="1185.6,84.8" sap2010:WorkflowViewState.IdRef="NCheckState_182" ScopeIdentifier="a2561c98-dd5b-46d5-9a8b-a8b473d28299" Timeout="5" Version="V3">
                                                     <uix:NCheckState.IfExists>
                                                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1084.8,1156" sap2010:WorkflowViewState.IdRef="Sequence_634">
                                                         <sap:WorkflowViewStateService.ViewState>
@@ -692,31 +702,58 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </uix:NCheckState>
-                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPbinderLibrary.ReClass…'" sap:VirtualizedContainerService.HintSize="1185.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_412" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2561c98-dd5b-46d5-9a8b-a8b473d28299" Version="V3">
-                                                    <uix:NClick.Target>
-                                                      <uix:TargetAnchorable CVScreenId="d9105b99-0bff-4651-831b-42ef820c10d7" CvElementArea="1217, 546, 177, 31" CvType="InputBox" DesignTimeRectangle="1220, 552, 171, 22" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" Guid="ca5574a2-ad59-4ab7-bf3f-cf30d76d8207" ImageBase64="" InformativeScreenshot="ea4b4a8c99398d1b13d7cb042c48f802.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - Anderson, Jack (K1_5634667323) | 1040 | 2023 | Binder*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete">
-                                                        <uix:TargetAnchorable.PointOffset>
-                                                          <uix:PointOffset Position="BottomRight" X="-11" Y="-11" />
-                                                        </uix:TargetAnchorable.PointOffset>
-                                                      </uix:TargetAnchorable>
-                                                    </uix:NClick.Target>
-                                                    <uix:NClick.VerifyOptions>
-                                                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                                        <uix:VerifyExecutionOptions.Retry>
-                                                          <InArgument x:TypeArguments="x:Boolean" />
-                                                        </uix:VerifyExecutionOptions.Retry>
-                                                        <uix:VerifyExecutionOptions.Timeout>
-                                                          <InArgument x:TypeArguments="x:Double" />
-                                                        </uix:VerifyExecutionOptions.Timeout>
-                                                      </uix:VerifyExecutionOptions>
-                                                    </uix:NClick.VerifyOptions>
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                  </uix:NClick>
+                                                  <Switch x:TypeArguments="x:String" DisplayName="Click 'SPbinderLibrary.ReClass… based on engagement" Expression="[in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1185.6,781.6" sap2010:WorkflowViewState.IdRef="Switch`1_4">
+                                                    <uix:NClick x:Key="1040" ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPbinderLibrary.ReClass…'" sap:VirtualizedContainerService.HintSize="333.6,193.6" sap2010:WorkflowViewState.IdRef="NClick_412" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2561c98-dd5b-46d5-9a8b-a8b473d28299" Version="V3">
+                                                      <uix:NClick.Target>
+                                                        <uix:TargetAnchorable CVScreenId="d9105b99-0bff-4651-831b-42ef820c10d7" CvElementArea="1217, 546, 177, 31" CvType="InputBox" DesignTimeRectangle="1220, 552, 171, 22" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" Guid="ca5574a2-ad59-4ab7-bf3f-cf30d76d8207" ImageBase64="" InformativeScreenshot="ea4b4a8c99398d1b13d7cb042c48f802.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - Anderson, Jack (K1_5634667323) | 1040 | 2023 | Binder*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete">
+                                                          <uix:TargetAnchorable.PointOffset>
+                                                            <uix:PointOffset Position="BottomRight" X="-11" Y="-11" />
+                                                          </uix:TargetAnchorable.PointOffset>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NClick.Target>
+                                                      <uix:NClick.VerifyOptions>
+                                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                          <uix:VerifyExecutionOptions.Retry>
+                                                            <InArgument x:TypeArguments="x:Boolean" />
+                                                          </uix:VerifyExecutionOptions.Retry>
+                                                          <uix:VerifyExecutionOptions.Timeout>
+                                                            <InArgument x:TypeArguments="x:Double" />
+                                                          </uix:VerifyExecutionOptions.Timeout>
+                                                        </uix:VerifyExecutionOptions>
+                                                      </uix:NClick.VerifyOptions>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NClick>
+                                                    <uix:NClick x:Key="1041" ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPbinderLibrary.ReClass…'" sap:VirtualizedContainerService.HintSize="333.6,193.6" sap2010:WorkflowViewState.IdRef="NClick_432" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2561c98-dd5b-46d5-9a8b-a8b473d28299" Version="V3">
+                                                      <uix:NClick.Target>
+                                                        <uix:TargetAnchorable CVScreenId="d9105b99-0bff-4651-831b-42ef820c10d7" CvElementArea="1217, 546, 177, 31" CvType="InputBox" DesignTimeRectangle="1220, 552, 171, 22" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='grdPAS_013' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' idx='1' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='grdPAS_015' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" Guid="ca5574a2-ad59-4ab7-bf3f-cf30d76d8207" ImageBase64="" InformativeScreenshot="ea4b4a8c99398d1b13d7cb042c48f802.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - Anderson, Jack (K1_5634667323) | 1040 | 2023 | Binder*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete">
+                                                          <uix:TargetAnchorable.PointOffset>
+                                                            <uix:PointOffset Position="BottomRight" X="-11" Y="-11" />
+                                                          </uix:TargetAnchorable.PointOffset>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NClick.Target>
+                                                      <uix:NClick.VerifyOptions>
+                                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                          <uix:VerifyExecutionOptions.Retry>
+                                                            <InArgument x:TypeArguments="x:Boolean" />
+                                                          </uix:VerifyExecutionOptions.Retry>
+                                                          <uix:VerifyExecutionOptions.Timeout>
+                                                            <InArgument x:TypeArguments="x:Double" />
+                                                          </uix:VerifyExecutionOptions.Timeout>
+                                                        </uix:VerifyExecutionOptions>
+                                                      </uix:NClick.VerifyOptions>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NClick>
+                                                  </Switch>
                                                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'US Obligation'" sap:VirtualizedContainerService.HintSize="1185.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_413" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2561c98-dd5b-46d5-9a8b-a8b473d28299" Version="V3">
                                                     <uix:NClick.Target>
                                                       <uix:TargetAnchorable CVScreenId="78476274-7788-4a26-9520-6b6fad22ed42" CvTextArea="5, 66, 190, 15" CvTextArgument="US Treasury obligation interest" CvType="Text" DesignTimeRectangle="1226, 641, 257, 18" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl idx='3' name='SPbinderLibrary.ReClassType' role='list item' /&gt;&lt;ctrl name='US Treasury*' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='SPbinderLibrary.ReClassType' role='list item' /&gt;&lt;ctrl name='US Treasury obligation interest ' role='text' automationid='' check:text='US Treasury obligation interest' /&gt;" Guid="b8296003-3b8b-47b2-a6f7-ba5ee091287c" ImageBase64="" InformativeScreenshot="b883b0fb46242a242916043ab26a2e4d.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
@@ -1058,7 +1095,7 @@
                                                             <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DtFormSelection" />
                                                             <InArgument x:TypeArguments="scg:Dictionary(x:String, sd:DataTable)" x:Key="in_DictGoSystemSelector" />
                                                             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-                                                            <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem" />
+                                                            <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                                                             <InArgument x:TypeArguments="x:String" x:Key="Out_TotalAmount">[Out_TotalAmount]</InArgument>
                                                             <OutArgument x:TypeArguments="x:Boolean" x:Key="Str_TC46_Status">[Str_TC46_Status]</OutArgument>
                                                           </ui:InvokeWorkflowFile.Arguments>
@@ -6022,7 +6059,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:IfElseIfV2.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_121">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_121">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>

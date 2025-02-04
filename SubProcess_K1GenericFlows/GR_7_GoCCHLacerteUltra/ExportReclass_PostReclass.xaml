@@ -6,7 +6,7 @@
     <x:Property Name="Str_TC46_Status" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>2060,13030.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2060,13441.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -129,7 +129,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="2070.4,12965.6" sap2010:WorkflowViewState.IdRef="Sequence_141">
+  <Sequence sap:VirtualizedContainerService.HintSize="2070.4,13376.8" sap2010:WorkflowViewState.IdRef="Sequence_141">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="strtc46status">
         <sap:WorkflowViewStateService.ViewState>
@@ -154,13 +154,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Verify export functionality after post reclass." AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 | Binder ID: 336561" sap:VirtualizedContainerService.HintSize="2008,12876.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_15" ScopeGuid="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Verify export functionality after post reclass." AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 | Binder ID: 336561" sap:VirtualizedContainerService.HintSize="2008,13288" sap2010:WorkflowViewState.IdRef="NApplicationCard_15" ScopeGuid="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1974.4,12531.2" sap2010:WorkflowViewState.IdRef="Sequence_105">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1974.4,12942.4" sap2010:WorkflowViewState.IdRef="Sequence_105">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_DescriptionText" />
               <Variable x:TypeArguments="s:String[]" Name="arr_FormName" />
@@ -191,7 +191,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetAttributeGeneric>
-            <uix:NMouseScroll KeyModifiers="{x:Null}" ContinueOnError="True" Direction="Up" DisplayName="Mouse Scroll 'Line 1'" sap:VirtualizedContainerService.HintSize="1912,56.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="15" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
+            <uix:NMouseScroll KeyModifiers="{x:Null}" ContinueOnError="True" Direction="Up" DisplayName="Mouse Scroll 'Line 1'" sap:VirtualizedContainerService.HintSize="1912,84.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="15" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
               <uix:NMouseScroll.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="320, 469, 1587, 470" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='mainScrollViewer' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='mainScrollViewer' role='pane' check:fulltext='Line 1 - Ordinary business income (loss)&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Line 5 - Interest income&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;OTHER INTEREST INCOME - US&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;DIVIDEND INCOME - NONQUALIFIED&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;1,500&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;$1,500&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Line 6a - Ordinary Dividends&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;DIVIDEND INCOME - NONQUALIFIED&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;DIVIDEND INCOME - NONQUALIFIED&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;520&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;$520&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Line 6b - Qualified Dividends&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Line 8-Net short term capital gain&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Line 9a - Net long term capital gain (loss) (entire year)&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Line 11A - Other portfolio income (loss)&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;OTHER PORTFOLIO INCOME&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;OTHER PORTFOLIO INCOME&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;1,100&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;$1,100&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Line 11 - Other Income (loss)&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;SECTION 988 GAIN (LOSS)&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;SECTION 988 GAIN (LOSS)&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;1,102&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;$1,102&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Line 13H - Investment interest expense&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;INVESTMENT INTEREST EXPENSE&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;2,110&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;INVESTMENT INTEREST EXPENSE RELATED TO TRADING ACTIVITES&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;INVESTMENT INTEREST EXPENSE RELATED TO TRADING ACTIVITES&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;1,300&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;$3,410&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Line 13L - Deductions-portfolio (other)&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;FROM INVESTMENTS&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;59&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;OTHER PORTFOLIO DEDUCTIONS&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;OTHER PORTFOLIO DEDUCTIONS&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;1,301&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;$1,360&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Line 13 - Other deductions&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;Activity Number/Activity Name/Activity Type&amp;#xD;&amp;#xA;SEC 743(B) AMORT REDEMPTION&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;3,829&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;SEC. 754 AMORTIZATION&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;11,497&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;DEDUCTIONS - PORTFOLIO (FORMERLY DEDUCTIB&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;2,261&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;OTHER MISCELLANEOUS DEDUCTIONS&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;OTHER MISCELLANEOUS DEDUCTIONS&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;1,302&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;+&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;$18,889&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Line 17 - Other Amt Items&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;ADD NEW ROW&amp;#xD;&amp;#xA;Other Income and Adjusments&amp;#xD;&amp;#xA;Page &amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA; of &amp;#xD;&amp;#xA;Total&amp;#xD;&amp;#xA;ADD NEW ROW' /&gt;" Guid="54db1113-e4b2-4da7-bff9-16b5144db0d8" InformativeScreenshot="170beb11fe87b667a4920c420a6bc9af.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
               </uix:NMouseScroll.Target>
@@ -202,7 +202,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NMouseScroll>
-            <ui:IfElseIfV2 Condition="[str_Title.ToLower.Contains(&quot;cch&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="1912,11982.4" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+            <ui:IfElseIfV2 Condition="[str_Title.ToLower.Contains(&quot;cch&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="1912,12365.6" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
               <ui:IfElseIfV2.Else>
                 <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_123">
                   <sap:WorkflowViewStateService.ViewState>
@@ -217,14 +217,14 @@
                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="ElseIf" Condition="[str_Title.ToLower.Contains(&quot;go&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1649.6,3002.4" sap2010:WorkflowViewState.IdRef="Sequence_122">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1649.6,3327.2" sap2010:WorkflowViewState.IdRef="Sequence_122">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ADD NEW ROW'" sap:VirtualizedContainerService.HintSize="1587.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_321" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ADD NEW ROW'" sap:VirtualizedContainerService.HintSize="1587.2,84.8" sap2010:WorkflowViewState.IdRef="NClick_321" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable CVScreenId="33083681-fc2b-4363-91ac-fe14f8467fa1" CvTextArea="375, 625, 100, 13" CvTextArgument="ADD NEW ROW" CvType="Text" DesignTimeRectangle="376, 625, 100, 18" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl name='ADD NEW ROW' role='text' idx='1' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl name='ADD NEW ROW' role='text' automationid='' check:text='ADD NEW ROW' /&gt;" Guid="57233ec7-3f3b-4d07-b000-2b017c7d48f8" InformativeScreenshot="99ab587533d8fb6976ebc841c7aafed1.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete" />
                           </uix:NClick.Target>
@@ -245,7 +245,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Label'" sap:VirtualizedContainerService.HintSize="1587.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_322" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Label'" sap:VirtualizedContainerService.HintSize="1587.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_322" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable CVScreenId="a5a080cd-80b1-400f-a6fa-5ddfce2200b9" CvElementArea="738, 585, 25, 26" CvTextArea="743, 592, 13, 12" CvTextArgument="+" CvType="Button" DesignTimeRectangle="1196, 589, 10, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl idx='2' name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl name='+' role='push button' /&gt;&lt;ctrl name='+' role='text' automationid='' check:text='+' /&gt;" Guid="f90fe605-ee16-408c-8e2b-dcf1c4aac6a4" InformativeScreenshot="75f0c643c2440ee2f67f6773d5271715.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 *' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete">
                               <uix:TargetAnchorable.Anchors>
@@ -267,12 +267,12 @@
                           </uix:NClick.VerifyOptions>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="1587.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_323" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pane'" sap:VirtualizedContainerService.HintSize="1587.2,84.8" sap2010:WorkflowViewState.IdRef="NClick_323" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable DesignTimeRectangle="533, 190, 1172, 155" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="c1c9cb07-1242-484e-9ecc-a0ecbef1fcf3" InformativeScreenshot="ed4f89aa14f595cc7ed71a780137a3a4.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete" />
                           </uix:NClick.Target>
@@ -293,7 +293,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1587.2,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_44" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Text="101[k(Tab)]" Version="V3">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1587.2,84.8" sap2010:WorkflowViewState.IdRef="NTypeInto_44" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Text="101[k(Tab)]" Version="V3">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable CVScreenId="0b60b359-51d2-443c-8f9a-121df706c976" CvElementArea="378, 581, 364, 33" CvType="InputBox" DesignTimeRectangle="1069, 584, 121, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl idx='2' name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl role='editable text' idx='3' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="d23c4820-1303-4f39-95ab-aa794da61dde" ImageBase64="" InformativeScreenshot="2c063892e0cb0dfd32e23eaaad7e8bf6.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete" />
                           </uix:NTypeInto.Target>
@@ -304,7 +304,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NTypeInto>
-                        <uix:NGetText DisplayName="Get Text '$25,824'" sap:VirtualizedContainerService.HintSize="1587.2,56.8" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" TextString="[Out_TotalAmount]" Version="V3">
+                        <uix:NGetText DisplayName="Get Text '$25,824'" sap:VirtualizedContainerService.HintSize="1587.2,84.8" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" TextString="[Out_TotalAmount]" Version="V3">
                           <uix:NGetText.Target>
                             <uix:TargetAnchorable CVScreenId="c1a2d290-8c09-47bc-b90f-56f5166820bf" CvTextArea="1135, 657, 53, 17" CvType="AnyWordGroup" DesignTimeRectangle="1039, 616, 150, 38" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='txtSum' name='$*' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl automationid='txtSum' role='text' /&gt;" Guid="e207a5fd-76bb-47b1-b1e7-1c18d4db7fc3" ImageBase64="" InformativeScreenshot="4510d0d53d24ce6132f1b59c59b2a28f.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (K1_KR00037913 (V1)) | 1040 | 2022 | B*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                           </uix:NGetText.Target>
@@ -315,7 +315,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NGetText>
-                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1587.2,56.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1587.2,84.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
                           <ui:MultipleAssign.AssignOperations>
                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
@@ -502,7 +502,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NCheckState sap2010:Annotation.AnnotationText="Post reclass button appear or not&#xA;" DisplayName="Check App State  - Post Reclass continue" sap:VirtualizedContainerService.HintSize="1587.2,100.8" sap2010:WorkflowViewState.IdRef="NCheckState_153" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780">
+                        <uix:NCheckState sap2010:Annotation.AnnotationText="Post reclass button appear or not&#xA;" DisplayName="Check App State  - Post Reclass continue" sap:VirtualizedContainerService.HintSize="1587.2,116.8" sap2010:WorkflowViewState.IdRef="NCheckState_153" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780">
                           <uix:NCheckState.IfExists>
                             <Sequence sap:VirtualizedContainerService.HintSize="449.6,462.4" sap2010:WorkflowViewState.IdRef="Sequence_473">
                               <sap:WorkflowViewStateService.ViewState>
@@ -571,7 +571,7 @@
                             <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DtFormSelection" />
                             <InArgument x:TypeArguments="scg:Dictionary(x:String, sd:DataTable)" x:Key="in_DictGoSystemSelector" />
                             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-                            <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem" />
+                            <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="Out_TotalAmount">[Out_TotalAmount]</InArgument>
                             <OutArgument x:TypeArguments="x:Boolean" x:Key="Str_TC46_Status">[strtc46status]</OutArgument>
                           </ui:InvokeWorkflowFile.Arguments>
@@ -4448,7 +4448,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:IfElseIfV2.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_121">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="Sequence_121">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>

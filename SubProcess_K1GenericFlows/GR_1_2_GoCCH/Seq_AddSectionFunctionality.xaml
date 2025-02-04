@@ -6,7 +6,7 @@
     <x:Property Name="Str_TC06_Status" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1029.6,7536</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>998.4000000000001,7125.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -137,7 +137,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Seq_AddSectionfunstionality" sap:VirtualizedContainerService.HintSize="745.6,7471.2" sap2010:WorkflowViewState.IdRef="Sequence_48">
+  <Sequence DisplayName="Seq_AddSectionfunstionality" sap:VirtualizedContainerService.HintSize="745.6,7060.8" sap2010:WorkflowViewState.IdRef="Sequence_48">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -152,7 +152,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try Catch - ProformaEntityAddSections" sap:VirtualizedContainerService.HintSize="683.2,6480.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch - ProformaEntityAddSections" sap:VirtualizedContainerService.HintSize="683.2,6100.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Default="Line 5" Name="str_Line" />
         <Variable x:TypeArguments="x:String" Default="16AA" Name="str_ProformaEntity" />
@@ -164,13 +164,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SPbinder - ANDERSON, JACK (K1VK12_Sp42 (V1)) | 1040 | 2022 | Binder ID: 33391566 | " sap:VirtualizedContainerService.HintSize="646.4,5697.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="fe9bf3b5-735c-41c2-988e-032798dda0fa" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SPbinder - ANDERSON, JACK (K1VK12_Sp42 (V1)) | 1040 | 2022 | Binder ID: 33391566 | " sap:VirtualizedContainerService.HintSize="643.2,5317.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="fe9bf3b5-735c-41c2-988e-032798dda0fa" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,5406.4" sap2010:WorkflowViewState.IdRef="Sequence_45">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,5026.4" sap2010:WorkflowViewState.IdRef="Sequence_45">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="ui_Elementexists" />
                 </Sequence.Variables>
@@ -350,34 +350,6 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NClick>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="545.6,380" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                  <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="Sequence_74">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Line 5 - Interest income'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe9bf3b5-735c-41c2-988e-032798dda0fa" Version="V3">
-                        <uix:NClick.Target>
-                          <uix:TargetAnchorable CVScreenId="36c0ea45-b4c8-4adb-877a-0cf960759a87" CvTextArea="4, 53, 118, 12" CvTextArgument="Line 5 - Interest income" CvType="Text" DesignTimeRectangle="4, 53, 118, 12" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl idx='*' name='SPbinderLibrary.ReClassType' role='list item' /&gt;&lt;ctrl name='{0}*' role='text' /&gt;&quot;, str_Line)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.ReClassType' role='list item' /&gt;&lt;ctrl name='Line 5 - Interest income' role='text' automationid='' check:text='Line 5 - Interest income' /&gt;" Guid="02da3ee1-02d5-4b70-a80c-141acfe77b78" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete" />
-                        </uix:NClick.Target>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </uix:NClick>
-                    </Sequence>
-                  </ui:CommentOut.Body>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:CommentOut>
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="545.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[str_Line+&quot; is selcting for add section functionality.&quot;]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -560,7 +532,7 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="649.6,439.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="646.4,439.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -599,7 +571,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <If Condition="[str_LeadsheetType.ToLower.Contains(&quot;simplified&quot;)]" DisplayName="If Simplified binder - Manual Entity" sap:VirtualizedContainerService.HintSize="683.2,561.6" sap2010:WorkflowViewState.IdRef="If_20">
+    <If Condition="[str_LeadsheetType.ToLower.Contains(&quot;simplified&quot;)]" DisplayName="If Simplified binder - Manual Entity" sap:VirtualizedContainerService.HintSize="683.2,531.2" sap2010:WorkflowViewState.IdRef="If_20">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -617,14 +589,14 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,286.4" sap2010:WorkflowViewState.IdRef="Sequence_69">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_69">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Seq_ManualEntityAddSections - Invoke Workflow File (SubProcess_K1GenericFlows\GR_1_2_GoCCH\Seq_ManualEntityAddSections.xaml)" sap:VirtualizedContainerService.HintSize="353.6,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_1_2_GoCCH\Seq_ManualEntityAddSections.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Seq_ManualEntityAddSections - Invoke Workflow File (SubProcess_K1GenericFlows\GR_1_2_GoCCH\Seq_ManualEntityAddSections.xaml)" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_1_2_GoCCH\Seq_ManualEntityAddSections.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="dict_EntityName">[dict_EntityName]</InArgument>
