@@ -38,7 +38,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>998.4000000000001,8960.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1034.4,8960.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Adding_LineItems_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -1103,10 +1103,10 @@
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="in_str_TaxSoftware">[in_str_TaxSoftware]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="in_str_EntityType">[in_str_EntityType]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_GOSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").Equals("1040"),
+                      <InArgument x:TypeArguments="x:String" x:Key="in_GOSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").ToString.Equals("1040"),
 in_Config("GOSelector_Classic_path").ToString,
 in_Config("GOSelector_Classic_path_1041").ToString)]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_CCHSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").Equals("1040"),
+                      <InArgument x:TypeArguments="x:String" x:Key="in_CCHSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").ToString.Equals("1040"),
 in_Config("CCHSelector_Classic_path").ToString,
 in_Config("CCHSelector_Classic_path_1041").ToString)]</InArgument>
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_41">[out_TC_41]</OutArgument>
@@ -1117,10 +1117,10 @@ in_Config("CCHSelector_Classic_path_1041").ToString)]</InArgument>
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_32">[out_TC_32]</OutArgument>
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_38">[out_TC_38]</OutArgument>
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_39">[out_TC_39]</OutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_UltraSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").Equals("1040"),
+                      <InArgument x:TypeArguments="x:String" x:Key="in_UltraSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").ToString.Equals("1040"),
 in_Config("UltraSelector_Classic_path").ToString,
 in_Config("UltraSelector_Classic_path_1041").ToString)]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_LacerteSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").Equals("1040"),
+                      <InArgument x:TypeArguments="x:String" x:Key="in_LacerteSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").ToString.Equals("1040"),
 in_Config("LacerteSelector_Classic_path").ToString,
 in_Config("LacerteSelector_Classic_path_1041").ToString)]</InArgument>
                       <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_transactionItem">[in_TransactionItem]</InArgument>

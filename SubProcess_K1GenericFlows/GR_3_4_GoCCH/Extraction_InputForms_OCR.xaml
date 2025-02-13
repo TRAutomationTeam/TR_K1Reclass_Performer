@@ -19,7 +19,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>998.4000000000001,9709.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1034.4,9709.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Extraction_InputForms_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -362,7 +362,7 @@
                             <uix:TargetAnchorable CvTextArea="359, 505, 67, 14" CvTextArgument="Citibank (T)" CvType="Text" DesignTimeRectangle="361, 503, 252, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='textblockSelectedFormName' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='FormsTabItem' /&gt;&lt;ctrl automationid='textblockSelectedFormName' role='text' check:text='Citibank (T)' /&gt;" Guid="366727b5-8afd-40f2-b1aa-2e0553f7cc99" ImageBase64="" InformativeScreenshot="7e401fd90d4d8f0b22aa5bf20a0026dc.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder -*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                           </uix:NGetAttributeGeneric.Target>
                         </uix:NGetAttributeGeneric>
-                        <If Condition="[in_transactionItem.SpecificContent(&quot;EngagementType&quot;).Equals(&quot;1040&quot;)]" DisplayName="Click 'Part III - (Lines 1-10) - Partner Share of Current Year Income*'" sap:VirtualizedContainerService.HintSize="452.8,700.8" sap2010:WorkflowViewState.IdRef="If_13">
+                        <If Condition="[in_transactionItem.SpecificContent(&quot;EngagementType&quot;).ToString.Equals(&quot;1040&quot;)]" DisplayName="Click 'Part III - (Lines 1-10) - Partner Share of Current Year Income*'" sap:VirtualizedContainerService.HintSize="452.8,700.8" sap2010:WorkflowViewState.IdRef="If_13">
                           <If.Then>
                             <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="Sequence_81">
                               <sap:WorkflowViewStateService.ViewState>

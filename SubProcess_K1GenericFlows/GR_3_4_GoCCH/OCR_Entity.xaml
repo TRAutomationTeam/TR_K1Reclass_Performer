@@ -17,7 +17,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>998.4000000000001,6983.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1034.4,7039.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>OCR_Entity_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -148,7 +148,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Performing the following functionalities on the OCR Entity Line items.&#xA;1.Read LineItem Rows&#xA;2.Perform PostReclass&#xA;3.Input Form Verification" DisplayName="OCR_Entity" sap:VirtualizedContainerService.HintSize="766.4,6918.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Performing the following functionalities on the OCR Entity Line items.&#xA;1.Read LineItem Rows&#xA;2.Perform PostReclass&#xA;3.Input Form Verification" DisplayName="OCR_Entity" sap:VirtualizedContainerService.HintSize="766.4,6974.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ui_Children" />
       <Variable x:TypeArguments="x:Boolean" Name="exec_TC_12" />
@@ -835,20 +835,20 @@
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <If sap2010:Annotation.AnnotationText="Branching the flow based on the Test Case Category Group." Condition="[in_dict_GroupClassifier(&quot;Input Forms and Leadsheet Verification&quot;).ToString.ToUpper.Equals(&quot;YES&quot;)]" DisplayName="BranchingPostReclassTCCategory" sap:VirtualizedContainerService.HintSize="704,5232" sap2010:WorkflowViewState.IdRef="If_7">
+    <If sap2010:Annotation.AnnotationText="Branching the flow based on the Test Case Category Group." Condition="[in_dict_GroupClassifier(&quot;Input Forms and Leadsheet Verification&quot;).ToString.ToUpper.Equals(&quot;YES&quot;)]" DisplayName="BranchingPostReclassTCCategory" sap:VirtualizedContainerService.HintSize="704,5288" sap2010:WorkflowViewState.IdRef="If_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="670.4,4934.4" sap2010:WorkflowViewState.IdRef="Sequence_62">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="670.4,4990.4" sap2010:WorkflowViewState.IdRef="Sequence_62">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="Verification of the data reflected on the Input Forms post Reclass.&#xA;1.Navigation to particular entity input form.&#xA;2.Extraction of data from input form.&#xA;3.Writing extracted data to targeted excel file." DisplayName="InputForm_Verification" sap:VirtualizedContainerService.HintSize="608,4845.6" sap2010:WorkflowViewState.IdRef="Sequence_51">
+          <Sequence sap2010:Annotation.AnnotationText="Verification of the data reflected on the Input Forms post Reclass.&#xA;1.Navigation to particular entity input form.&#xA;2.Extraction of data from input form.&#xA;3.Writing extracted data to targeted excel file." DisplayName="InputForm_Verification" sap:VirtualizedContainerService.HintSize="608,4901.6" sap2010:WorkflowViewState.IdRef="Sequence_51">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1059,7 +1059,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[in_str_TaxSoftware = &quot;LACERTE&quot; OR in_str_TaxSoftware = &quot;ULTRA&quot;]" DisplayName="If Tax App is Lacerte or Ultra, Perform Extraction_InputForm_OCR" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="If_8">
+                  <If Condition="[in_str_TaxSoftware = &quot;LACERTE&quot; OR in_str_TaxSoftware = &quot;ULTRA&quot;]" DisplayName="If Tax App is Lacerte or Ultra, Perform Extraction_InputForm_OCR" sap:VirtualizedContainerService.HintSize="449.6,849.6" sap2010:WorkflowViewState.IdRef="If_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1077,10 +1077,10 @@
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="x:String" x:Key="in_str_TaxSoftware">[in_str_TaxSoftware]</InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="in_str_EntityType">[in_str_EntityType]</InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_GOSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").Equals("1040"),
+                            <InArgument x:TypeArguments="x:String" x:Key="in_GOSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").ToString.Equals("1040"),
 in_Config("GOSelector_Classic_path").ToString,
 in_Config("GOSelector_Classic_path_1041").ToString)]</InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_CCHSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").Equals("1040"),
+                            <InArgument x:TypeArguments="x:String" x:Key="in_CCHSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").ToString.Equals("1040"),
 in_Config("CCHSelector_Classic_path").ToString,
 in_Config("CCHSelector_Classic_path_1041").ToString)]</InArgument>
                             <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_41">[exec_TC_41]</OutArgument>
@@ -1091,10 +1091,10 @@ in_Config("CCHSelector_Classic_path_1041").ToString)]</InArgument>
                             <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_32">[exec_TC_32]</OutArgument>
                             <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_38">[exec_TC_38]</OutArgument>
                             <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_39">[exec_TC_39]</OutArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_UltraSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").Equals("1040"),
+                            <InArgument x:TypeArguments="x:String" x:Key="in_UltraSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").ToString.Equals("1040"),
 in_Config("UltraSelector_Classic_path").ToString,
 in_Config("UltraSelector_Classic_path_1041").ToString)]</InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_LacerteSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").Equals("1040"),
+                            <InArgument x:TypeArguments="x:String" x:Key="in_LacerteSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").ToString.Equals("1040"),
 in_Config("LacerteSelector_Classic_path").ToString,
 in_Config("LacerteSelector_Classic_path_1041").ToString)]</InArgument>
                             <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_transactionItem">[in_TransactionItem]</InArgument>
@@ -1181,10 +1181,10 @@ in_Config("LacerteSelector_Classic_path_1041").ToString)]</InArgument>
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="in_str_TaxSoftware">[in_str_TaxSoftware]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="in_str_EntityType">[in_str_EntityType]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_GOSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").Equals("1040"),
+                      <InArgument x:TypeArguments="x:String" x:Key="in_GOSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").ToString.Equals("1040"),
 in_Config("GOSelector_Classic_path").ToString,
 in_Config("GOSelector_Classic_path_1041").ToString)]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_CCHSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").Equals("1040"),
+                      <InArgument x:TypeArguments="x:String" x:Key="in_CCHSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").ToString.Equals("1040"),
 in_Config("CCHSelector_Classic_path").ToString,
 in_Config("CCHSelector_Classic_path_1041").ToString)]</InArgument>
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_41">[exec_TC_41]</OutArgument>
@@ -1195,10 +1195,10 @@ in_Config("CCHSelector_Classic_path_1041").ToString)]</InArgument>
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_32">[exec_TC_32]</OutArgument>
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_38">[exec_TC_38]</OutArgument>
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_39">[exec_TC_39]</OutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_UltraSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").Equals("1040"),
+                      <InArgument x:TypeArguments="x:String" x:Key="in_UltraSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").ToString.Equals("1040"),
 in_Config("UltraSelector_Classic_path").ToString,
 in_Config("UltraSelector_Classic_path_1041").ToString)]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_LacerteSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").Equals("1040"),
+                      <InArgument x:TypeArguments="x:String" x:Key="in_LacerteSelector_Classic_path" xml:space="preserve">[If(in_TransactionItem.SpecificContent("EngagementType").ToString.Equals("1040"),
 in_Config("LacerteSelector_Classic_path").ToString,
 in_Config("LacerteSelector_Classic_path_1041").ToString)]</InArgument>
                       <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_transactionItem">[in_TransactionItem]</InArgument>
@@ -1213,7 +1213,7 @@ in_Config("LacerteSelector_Classic_path_1041").ToString)]</InArgument>
                 </Sequence>
               </If.Else>
             </If>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="545.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="545.6,84.8" sap2010:WorkflowViewState.IdRef="CommentOut_13">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,865.6" sap2010:WorkflowViewState.IdRef="Sequence_46">
                   <sap:WorkflowViewStateService.ViewState>
@@ -1265,7 +1265,7 @@ in_Config("LacerteSelector_Classic_path_1041").ToString)]</InArgument>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut sap2010:Annotation.AnnotationText="Extraction of Data from Input OCR Forms" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="545.6,100.8" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+            <ui:CommentOut sap2010:Annotation.AnnotationText="Extraction of Data from Input OCR Forms" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="545.6,128.8" sap2010:WorkflowViewState.IdRef="CommentOut_11">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,286.4" sap2010:WorkflowViewState.IdRef="Sequence_43">
                   <sap:WorkflowViewStateService.ViewState>
