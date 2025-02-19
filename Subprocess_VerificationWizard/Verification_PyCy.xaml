@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1244,3625.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1402.4,4538.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>WizardAutomationK1_PyCy_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -117,18 +117,18 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Wizard K1 Automation (Py &amp; Cy)" sap:VirtualizedContainerService.HintSize="1254.4,3560.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+  <Sequence DisplayName="Wizard K1 Automation (Py &amp; Cy)" sap:VirtualizedContainerService.HintSize="1412.8,4473.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1192,3472" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1350.4,4384.8" sap2010:WorkflowViewState.IdRef="TryCatch_5">
       <TryCatch.Try>
-        <ui:RetryScope DisplayName="Wizard Automation K1_PyCy" sap:VirtualizedContainerService.HintSize="1155.2,3217.6" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="2">
+        <ui:RetryScope DisplayName="Wizard Automation K1_PyCy" sap:VirtualizedContainerService.HintSize="1313.6,4130.4" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="2">
           <ui:RetryScope.ActivityBody>
             <ActivityAction>
-              <TryCatch DisplayName="WizardAutomationK1_PyCy" sap:VirtualizedContainerService.HintSize="1113.6,3041.6" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+              <TryCatch DisplayName="WizardAutomationK1_PyCy" sap:VirtualizedContainerService.HintSize="1272,3954.4" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -136,7 +136,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <Sequence DisplayName="WizardAutomationK1_PyCy" sap:VirtualizedContainerService.HintSize="1076.8,2810.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <Sequence DisplayName="WizardAutomationK1_PyCy" sap:VirtualizedContainerService.HintSize="1235.2,3723.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="skipVerificationFlag" />
                     </Sequence.Variables>
@@ -146,14 +146,14 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="log Verification K1 Start" sap:VirtualizedContainerService.HintSize="1014.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;***********************************&quot;+&#xA;If(in_PYYrFlag,&quot;PY Verification Started&quot;,&quot;CY Verification Started&quot;)+&#xA;&quot;************************************&quot;]">
+                    <ui:LogMessage DisplayName="log Verification K1 Start" sap:VirtualizedContainerService.HintSize="1172.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;***********************************&quot;+&#xA;If(in_PYYrFlag,&quot;PY Verification Started&quot;,&quot;CY Verification Started&quot;)+&#xA;&quot;************************************&quot;]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
-                    <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="FileRoom Initiate" sap:VirtualizedContainerService.HintSize="1014.4,1003.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="FileRoom Initiate" sap:VirtualizedContainerService.HintSize="1172.8,1003.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -199,7 +199,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NCheckState>
                     </Sequence>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="FileRoom_SearchBinder - Invoke Workflow File (FileRoom_SearchBinder.xaml)" sap:VirtualizedContainerService.HintSize="1014.4,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Common\FileRoom_SearchBinder_PYCY.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="FileRoom_SearchBinder - Invoke Workflow File (FileRoom_SearchBinder.xaml)" sap:VirtualizedContainerService.HintSize="1172.8,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Common\FileRoom_SearchBinder_PYCY.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
@@ -209,7 +209,7 @@
                         <OutArgument x:TypeArguments="x:Boolean" x:Key="out_SkipVerificationFlag">[skipVerificationFlag]</OutArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
-                    <If Condition="[skipVerificationFlag]" DisplayName="K1 Parental/Line Processing" sap:VirtualizedContainerService.HintSize="1014.4,1368" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[skipVerificationFlag]" DisplayName="K1 Parental/Line Processing" sap:VirtualizedContainerService.HintSize="1172.8,2280.8" sap2010:WorkflowViewState.IdRef="If_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -227,49 +227,49 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="512,1004" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1139.2,1916.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_MadatoryChecks - Invoke Workflow File (Subprocess_VerificationWizard\Verification_MadatoryChecks.xaml)" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Subprocess_VerificationWizard\Verification_MadatoryChecks.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_MadatoryChecks - Invoke Workflow File (Subprocess_VerificationWizard\Verification_MadatoryChecks.xaml)" sap:VirtualizedContainerService.HintSize="1076.8,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Subprocess_VerificationWizard\Verification_MadatoryChecks.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="x:Boolean" x:Key="in_PYYrFlag">[in_PYYrFlag]</InArgument>
                               <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_SupplementLineItemsProcessing - Invoke Workflow File (Subprocess_VerificationWizard\Verification_SupplementLineItemsProcessing.xaml)" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="Subprocess_VerificationWizard\Verification_SupplementLineItemsProcessing.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_SupplementLineItemsProcessing - Invoke Workflow File (Subprocess_VerificationWizard\Verification_SupplementLineItemsProcessing.xaml)" sap:VirtualizedContainerService.HintSize="1076.8,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="Subprocess_VerificationWizard\Verification_SupplementLineItemsProcessing.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                               <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                               <InArgument x:TypeArguments="x:Boolean" x:Key="in_PYYrFlag">[in_PYYrFlag]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_ParentProcessing - Invoke Workflow File (Subprocess_VerificationWizard\Verification_ParentProcessing.xaml)" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Subprocess_VerificationWizard\Verification_ParentProcessing.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Verification_ParentProcessing - Invoke Workflow File (Subprocess_VerificationWizard\Verification_ParentProcessing.xaml)" sap:VirtualizedContainerService.HintSize="1076.8,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Subprocess_VerificationWizard\Verification_ParentProcessing.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                               <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                               <InArgument x:TypeArguments="x:Boolean" x:Key="in_PYYrFlag">[in_PYYrFlag]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
-                          <Sequence DisplayName="Export Handling" sap:VirtualizedContainerService.HintSize="449.6,387.2" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                          <Sequence DisplayName="Export Handling" sap:VirtualizedContainerService.HintSize="1076.8,1300" sap2010:WorkflowViewState.IdRef="Sequence_35">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NCheckState DisplayName="Close Export Pop-up" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_5" Timeout="15" Version="V4">
+                            <uix:NCheckState DisplayName="Close Export Pop-up" sap:VirtualizedContainerService.HintSize="1014.4,969.6" sap2010:WorkflowViewState.IdRef="NCheckState_5" Timeout="15" Version="V4">
                               <uix:NCheckState.IfExists>
-                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,719.2" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,679.2" sap2010:WorkflowViewState.IdRef="Sequence_37">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SPbinder" sap:VirtualizedContainerService.HintSize="449.6,628.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="3aed15d8-cacb-4c60-9dfb-b4beeb39e783" Version="V2">
+                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SPbinder" sap:VirtualizedContainerService.HintSize="449.6,588.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="3aed15d8-cacb-4c60-9dfb-b4beeb39e783" Version="V2">
                                     <uix:NApplicationCard.Body>
                                       <ActivityAction x:TypeArguments="x:Object">
                                         <ActivityAction.Argument>
@@ -327,12 +327,12 @@
                               </uix:NCheckState.Target>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NCheckState>
-                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1014.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                               <ui:CommentOut.Body>
                                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -340,7 +340,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Export_Lacerte - Invoke Workflow File (SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\Export_Lacerte.xaml)" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_34" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\Export_Lacerte.xaml">
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Export_Lacerte - Invoke Workflow File (SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\Export_Lacerte.xaml)" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_34" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_5_GoCCHLacerteUltra\Export_Lacerte.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <InArgument x:TypeArguments="x:String" x:Key="In_StrTaxSoftwareName">[in_TransactionItem.SpecificContent("TaxSoftware").ToString]</InArgument>
                                       <InArgument x:TypeArguments="x:String" x:Key="in_strTaxFilePath">[in_TransactionItem.SpecificContent("CYTaxFilePath").ToString]</InArgument>
@@ -359,7 +359,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:CommentOut>
-                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1014.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                               <ui:CommentOut.Body>
                                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_40">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -381,7 +381,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:CommentOut>
-                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1014.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                               <ui:CommentOut.Body>
                                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,180.8" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -389,7 +389,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="FileRoom Initiate" sap:VirtualizedContainerService.HintSize="1014.4000000000001,971.2" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="FileRoom Initiate" sap:VirtualizedContainerService.HintSize="449.6,92" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -444,7 +444,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:CommentOut>
-                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,48" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1014.4,48" sap2010:WorkflowViewState.IdRef="CommentOut_4">
                               <ui:CommentOut.Body>
                                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -478,7 +478,7 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1080,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1238.4,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -517,7 +517,7 @@
         </ui:RetryScope>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1158.4,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1316.8,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>

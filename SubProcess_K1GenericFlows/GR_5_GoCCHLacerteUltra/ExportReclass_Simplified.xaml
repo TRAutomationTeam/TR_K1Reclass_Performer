@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Activity mc:Ignorable="sap sap2010" x:Class="Seq_K1ReclassButtonFunctionalityForActivities_" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -537,7 +538,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NCheckState>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SPBinder_ExportDataGo - Invoke Workflow File (SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\GoSystem\SPBinder_ExportDataGo.xaml)" sap:VirtualizedContainerService.HintSize="952,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\GoSystem\SPBinder_ExportDataGo.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SPBinder_ExportDataGo - Invoke Workflow File (SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\GoSystem\SPBinder_ExportDataGo.xaml)" sap:VirtualizedContainerService.HintSize="952,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_5_GoCCHLacerteUltra\GoSystem\SPBinder_ExportDataGo.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <OutArgument x:TypeArguments="x:Boolean" x:Key="Str_TC46_Status" />
                             <OutArgument x:TypeArguments="x:Boolean" x:Key="Str_TC47_Status" />
@@ -993,7 +994,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </uix:NCheckState>
-                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Export_Lacerte - Invoke Workflow File (SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\Export_Lacerte.xaml)" sap:VirtualizedContainerService.HintSize="1044.8,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\Export_Lacerte.xaml">
+                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Export_Lacerte - Invoke Workflow File (SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\Export_Lacerte.xaml)" sap:VirtualizedContainerService.HintSize="1044.8,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_5_GoCCHLacerteUltra\Export_Lacerte.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
                                                 <InArgument x:TypeArguments="x:String" x:Key="In_StrTaxSoftwareName">[in_TransactionItem.SpecificContent("TaxSoftware").ToString]</InArgument>
                                                 <InArgument x:TypeArguments="x:String" x:Key="in_strTaxFilePath">[in_TransactionItem.SpecificContent("CYTaxFilePath").ToString]</InArgument>
@@ -1515,7 +1516,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </uix:NCheckState>
-                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Export_Lacerte - Invoke Workflow File (SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\Export_Lacerte.xaml)" sap:VirtualizedContainerService.HintSize="1044.8,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\Export_Lacerte.xaml">
+                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Export_Lacerte - Invoke Workflow File (SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\Export_Lacerte.xaml)" sap:VirtualizedContainerService.HintSize="1044.8,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_5_GoCCHLacerteUltra\Export_Lacerte.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
                                                 <InArgument x:TypeArguments="x:String" x:Key="In_StrTaxSoftwareName">[in_TransactionItem.SpecificContent("TaxSoftware").ToString]</InArgument>
                                                 <InArgument x:TypeArguments="x:String" x:Key="in_strTaxFilePath">[in_TransactionItem.SpecificContent("CYTaxFilePath").ToString]</InArgument>
@@ -1994,7 +1995,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NCheckState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SPBinder_ExportDataCCH - Invoke Workflow File (SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\SPBinder_ExportDataCCH.xaml)" sap:VirtualizedContainerService.HintSize="952,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\SPBinder_ExportDataCCH.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SPBinder_ExportDataCCH - Invoke Workflow File (SubProcess_K1GenericFlows\GR_7_GoCCHLacerteUltra\SPBinder_ExportDataCCH.xaml)" sap:VirtualizedContainerService.HintSize="952,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_5_GoCCHLacerteUltra\SPBinder_ExportDataCCH.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="Str_TC46_Status" />
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="Str_TC47_Status" />

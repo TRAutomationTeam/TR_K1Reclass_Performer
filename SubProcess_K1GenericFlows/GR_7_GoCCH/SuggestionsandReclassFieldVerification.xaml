@@ -14,7 +14,7 @@
     <x:Property Name="dt_K1ConsoReport" Type="InOutArgument(sd:DataTable)" />
     <x:Property Name="in_SuggestionReclassExclude" Type="InArgument(x:Boolean)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>2164,28329.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1034.4,6464</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -257,13 +257,13 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="2174.4,28264.8" sap2010:WorkflowViewState.IdRef="Sequence_254">
+  <Sequence sap:VirtualizedContainerService.HintSize="1024,6399.2" sap2010:WorkflowViewState.IdRef="Sequence_254">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Suggestions and Reclass Field Verification" sap:VirtualizedContainerService.HintSize="2112,28176" sap2010:WorkflowViewState.IdRef="Sequence_253">
+    <Sequence DisplayName="Suggestions and Reclass Field Verification" sap:VirtualizedContainerService.HintSize="961.6,6310.4" sap2010:WorkflowViewState.IdRef="Sequence_253">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="str_AppPath" />
         <Variable x:TypeArguments="x:String" Name="str_ReclassToList" />
@@ -278,7 +278,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="2049.6,399.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="899.2,399.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -367,13 +367,13 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
-      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Workflow to perform the following test cases of the Suggestions and Reclass Field Verification category.&#xA;TC_19,TC_20,TC_21,TC_22,TC_23,TC_24,TC_25,TC_26,TC_27,TC_28,TC_52,TC_53,TC_54,TC_55" AttachMode="ByInstance" DisplayName="Suggestions" sap:VirtualizedContainerService.HintSize="2049.6,27664.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_21" ScopeGuid="6e17bba3-9ded-42d2-b7da-26d81f562ea9" Version="V2">
+      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Workflow to perform the following test cases of the Suggestions and Reclass Field Verification category.&#xA;TC_19,TC_20,TC_21,TC_22,TC_23,TC_24,TC_25,TC_26,TC_27,TC_28,TC_52,TC_53,TC_54,TC_55" AttachMode="ByInstance" DisplayName="Suggestions" sap:VirtualizedContainerService.HintSize="899.2,5799.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_21" ScopeGuid="6e17bba3-9ded-42d2-b7da-26d81f562ea9" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2016,27306.4" sap2010:WorkflowViewState.IdRef="Sequence_119">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="865.6,5440.8" sap2010:WorkflowViewState.IdRef="Sequence_119">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="str_LineItem" />
                 <Variable x:TypeArguments="x:String" Name="str_LineRowDescription" />
@@ -395,7 +395,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Select_K1_Reclass" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_293">
+              <Sequence DisplayName="Select_K1_Reclass" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_293">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -441,14 +441,14 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NClick>
               </Sequence>
-              <Switch x:TypeArguments="x:String" DisplayName="Branching_For_SelectorInformation" Expression="[in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1953.6,2321.6" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+              <Switch x:TypeArguments="x:String" DisplayName="Branching_For_SelectorInformation" Expression="[in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString]" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="Switch`1_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:IfElseIf x:Key="1040" sap2010:Annotation.AnnotationText="Branching based on tax software and reading selector file" DisplayName="Branching_For_SelectorInformation" sap:VirtualizedContainerService.HintSize="281.6,68.8" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                <ui:IfElseIf x:Key="1040" sap2010:Annotation.AnnotationText="Branching based on tax software and reading selector file" DisplayName="Branching_For_SelectorInformation" sap:VirtualizedContainerService.HintSize="200,84.8" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
                   <ui:IfElseIf.ConditionBlocks>
                     <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                       <ui:IfElseIfBlock BlockType="If" Condition="[in_str_TaxSoftware=&quot;CCH&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_16">
@@ -697,7 +697,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:IfElseIf>
               </Switch>
-              <TryCatch DisplayName="Try Catch_TC_19" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_34">
+              <TryCatch DisplayName="Try Catch_TC_19" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_34">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -889,7 +889,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_20" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_35">
+              <TryCatch DisplayName="Try Catch_TC_20" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_35">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1751,7 +1751,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="TryCatch_TC_21" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_26">
+              <TryCatch DisplayName="TryCatch_TC_21" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_26">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1850,7 +1850,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_22" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_36">
+              <TryCatch DisplayName="Try Catch_TC_22" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_36">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1977,7 +1977,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_23" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_25">
+              <TryCatch DisplayName="Try Catch_TC_23" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_25">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2117,11 +2117,11 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <If sap2010:Annotation.AnnotationText="Branching execution for running Test Case 24 and Test Case 27 simultaneously." Condition="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString=&quot;CCH Axcess Tax&quot; AND in_TransactionItem.SpecificContent(&quot;LeadsheetOption&quot;).ToString=&quot;Classic Leadsheets&quot;]" DisplayName="Execute_TC_24_ForCCH" sap:VirtualizedContainerService.HintSize="1953.6,3120.8" sap2010:WorkflowViewState.IdRef="If_75">
+              <If sap2010:Annotation.AnnotationText="Branching execution for running Test Case 24 and Test Case 27 simultaneously." Condition="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString=&quot;CCH Axcess Tax&quot; AND in_TransactionItem.SpecificContent(&quot;LeadsheetOption&quot;).ToString=&quot;Classic Leadsheets&quot;]" DisplayName="Execute_TC_24_ForCCH" sap:VirtualizedContainerService.HintSize="803.2,116.8" sap2010:WorkflowViewState.IdRef="If_75">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -2679,11 +2679,11 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Sequence>
                 </If.Else>
               </If>
-              <TryCatch DisplayName="Try Catch_TC_26&amp;28" sap:VirtualizedContainerService.HintSize="1953.6,3444.8" sap2010:WorkflowViewState.IdRef="TryCatch_39">
+              <TryCatch DisplayName="Try Catch_TC_26&amp;28" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_39">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
@@ -2819,11 +2819,11 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_25" sap:VirtualizedContainerService.HintSize="1953.6,4224" sap2010:WorkflowViewState.IdRef="TryCatch_37">
+              <TryCatch DisplayName="Try Catch_TC_25" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_37">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
@@ -3237,11 +3237,11 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_52&amp;TC_57" sap:VirtualizedContainerService.HintSize="1953.6,4663.2" sap2010:WorkflowViewState.IdRef="TryCatch_27">
+              <TryCatch DisplayName="Try Catch_TC_52&amp;TC_57" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_27">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
@@ -3555,11 +3555,11 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_53&amp;TC_58" sap:VirtualizedContainerService.HintSize="1953.6,8033.6" sap2010:WorkflowViewState.IdRef="TryCatch_45">
+              <TryCatch DisplayName="Try Catch_TC_53&amp;TC_58" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_45">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
@@ -4527,7 +4527,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_54" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_29">
+              <TryCatch DisplayName="Try Catch_TC_54" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_29">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4719,7 +4719,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_55" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_30">
+              <TryCatch DisplayName="Try Catch_TC_55" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_30">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4957,7 +4957,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_56" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_31">
+              <TryCatch DisplayName="Try Catch_TC_56" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_31">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5076,7 +5076,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_59" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_32">
+              <TryCatch DisplayName="Try Catch_TC_59" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_32">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5256,7 +5256,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_60" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_33">
+              <TryCatch DisplayName="Try Catch_TC_60" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_33">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5571,7 +5571,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_64&amp;TC_65" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_40">
+              <TryCatch DisplayName="Try Catch_TC_64&amp;TC_65" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_40">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -6219,7 +6219,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_39">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_39">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,324.8" sap2010:WorkflowViewState.IdRef="Sequence_466">
                     <sap:WorkflowViewStateService.ViewState>
@@ -6245,7 +6245,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <TryCatch DisplayName="Try Catch_TC_66" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_16">
+              <TryCatch DisplayName="Try Catch_TC_66" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_16">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -6391,7 +6391,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <TryCatch DisplayName="Try Catch_TC_78&amp;TC_79" sap:VirtualizedContainerService.HintSize="1953.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_17">
+              <TryCatch DisplayName="Try Catch_TC_78&amp;TC_79" sap:VirtualizedContainerService.HintSize="803.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_17">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -7021,7 +7021,13 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <If Condition="[in_SuggestionReclassExclude]" DisplayName="Try Catch_TC_80,63,81,82, 83,84_85_86_89_106_107_108_122_123_124_134, 135, 107" sap:VirtualizedContainerService.HintSize="1953.6,556" sap2010:WorkflowViewState.IdRef="If_77">
+              <If Condition="[in_SuggestionReclassExclude]" DisplayName="Try Catch_TC_80,63,81,82, 83,84_85_86_89_106_107_108_122_123_124_134, 135, 107" sap:VirtualizedContainerService.HintSize="803.2,4097.6" sap2010:WorkflowViewState.IdRef="If_77">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_555">
                     <sap:WorkflowViewStateService.ViewState>
@@ -7033,21 +7039,21 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_556">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="769.6,3678.4" sap2010:WorkflowViewState.IdRef="Sequence_556">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <TryCatch DisplayName="Try Catch_TC_80,63,81,82, 83,84_85_86_89_106_107_108_122_123_124_134, 135, 107" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="TryCatch_19">
+                    <TryCatch DisplayName="Try Catch_TC_80,63,81,82, 83,84_85_86_89_106_107_108_122_123_124_134, 135, 107" sap:VirtualizedContainerService.HintSize="707.2,3589.6" sap2010:WorkflowViewState.IdRef="TryCatch_19">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <TryCatch.Try>
-                        <Sequence sap2010:Annotation.AnnotationText="Verify that when a user does K-1 reclass for the first time in subsequent submission then the suggestions should get populated based on the expert suggestions.&#xA;Verify suggestions are available on subsequent&#xA;submission as well&#xA;1. After all jobs are complete, complete verification wizard&#xA;2. Open Binder&#xA;3. Navigate to K1 Reclass tab&#xA;4. Check for the Reclass suggestion pop up&#xA;5. Check for the expert based as well as prior year suggestions in the K1 Reclass tab" DisplayName="TC_80&amp;TC_63" sap:VirtualizedContainerService.HintSize="766.4,5493.6" sap2010:WorkflowViewState.IdRef="Sequence_251">
+                        <Sequence sap2010:Annotation.AnnotationText="Verify that when a user does K-1 reclass for the first time in subsequent submission then the suggestions should get populated based on the expert suggestions.&#xA;Verify suggestions are available on subsequent&#xA;submission as well&#xA;1. After all jobs are complete, complete verification wizard&#xA;2. Open Binder&#xA;3. Navigate to K1 Reclass tab&#xA;4. Check for the Reclass suggestion pop up&#xA;5. Check for the expert based as well as prior year suggestions in the K1 Reclass tab" DisplayName="TC_80&amp;TC_63" sap:VirtualizedContainerService.HintSize="670.4,2751.2" sap2010:WorkflowViewState.IdRef="Sequence_251">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -7055,7 +7061,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Add_New_Demo_Document" sap:VirtualizedContainerService.HintSize="704,5247.2" sap2010:WorkflowViewState.IdRef="Sequence_139">
+                          <Sequence DisplayName="Add_New_Demo_Document" sap:VirtualizedContainerService.HintSize="608,2506.4" sap2010:WorkflowViewState.IdRef="Sequence_139">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="sd:DataTable" Name="dt_InputData" />
                               <Variable x:TypeArguments="sd:DataTable" Name="dt_combinePath" />
@@ -7068,7 +7074,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="641.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_14">
+                            <Assign sap:VirtualizedContainerService.HintSize="545.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_14">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[str_DemoDocs]</OutArgument>
                               </Assign.To>
@@ -7082,7 +7088,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="641.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_15">
+                            <Assign sap:VirtualizedContainerService.HintSize="545.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_15">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="scg:List(x:String)">[str_Splitpathlist]</OutArgument>
                               </Assign.To>
@@ -7096,7 +7102,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <If Condition="[str_DemoDocs=&quot;&quot;]" DisplayName="BranchingBlankDocuments" sap:VirtualizedContainerService.HintSize="641.6,4903.2" sap2010:WorkflowViewState.IdRef="If_39">
+                            <If Condition="[str_DemoDocs=&quot;&quot;]" DisplayName="BranchingBlankDocuments" sap:VirtualizedContainerService.HintSize="545.6,2167.2" sap2010:WorkflowViewState.IdRef="If_39">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -7115,14 +7121,15 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="608,4440" sap2010:WorkflowViewState.IdRef="Sequence_298">
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="512,1705.6" sap2010:WorkflowViewState.IdRef="Sequence_298">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Delay DisplayName=" Delay 30 seconds" Duration="00:00:30" sap:VirtualizedContainerService.HintSize="545.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Anderson, Jack (8838US-SSY3) | 1040 | 2022 | Binder ID: 25509054 | Autom" sap:VirtualizedContainerService.HintSize="545.6,827.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" ScopeGuid="545d8f80-b3a7-4706-b7ce-9e06a51cd911" Version="V2">
+                                  <Delay DisplayName=" Delay 30 seconds" Duration="00:00:30" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Anderson, Jack (8838US-SSY3) | 1040 | 2022 | Binder ID: 25509054 | Autom" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" ScopeGuid="545d8f80-b3a7-4706-b7ce-9e06a51cd911" Version="V2">
                                     <uix:NApplicationCard.Body>
                                       <ActivityAction x:TypeArguments="x:Object">
                                         <ActivityAction.Argument>
@@ -7159,11 +7166,11 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </uix:NApplicationCard>
-                                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each file in ListOfFiles" sap:VirtualizedContainerService.HintSize="545.6,1481.6" sap2010:WorkflowViewState.IdRef="ForEach`1_11" Values="[str_Splitpathlist]">
+                                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each file in ListOfFiles" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="ForEach`1_11" Values="[str_Splitpathlist]">
                                     <ui:ForEach.Body>
                                       <ActivityAction x:TypeArguments="x:String">
                                         <ActivityAction.Argument>
@@ -7297,12 +7304,12 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                     </ui:ForEach.Body>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:ForEach>
-                                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Add Document" sap:VirtualizedContainerService.HintSize="545.6,596" sap2010:WorkflowViewState.IdRef="NApplicationCard_19" OpenMode="Never" ScopeGuid="31af7082-1b80-461b-adab-0d7bcb2b2fd9" Version="V2">
+                                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Add Document" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_19" OpenMode="Never" ScopeGuid="31af7082-1b80-461b-adab-0d7bcb2b2fd9" Version="V2">
                                     <uix:NApplicationCard.Body>
                                       <ActivityAction x:TypeArguments="x:Object">
                                         <ActivityAction.Argument>
@@ -7334,12 +7341,12 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </uix:NApplicationCard>
-                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:07:00" DisplayName="7 min agent processing delay" sap:VirtualizedContainerService.HintSize="545.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Waiting for Backend Agent Processing of the added docs, please wait for ~7 min to validate the status&quot;]" />
-                                  <If Condition="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString = &quot;CCH Axcess Tax&quot; OR in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString = &quot;GoSystem Tax RS&quot;]" sap:VirtualizedContainerService.HintSize="545.6,56.8" sap2010:WorkflowViewState.IdRef="If_40">
+                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:07:00" DisplayName="7 min agent processing delay" sap:VirtualizedContainerService.HintSize="449.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Waiting for Backend Agent Processing of the added docs, please wait for ~7 min to validate the status&quot;]" />
+                                  <If Condition="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString = &quot;CCH Axcess Tax&quot; OR in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString = &quot;GoSystem Tax RS&quot;]" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="If_40">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -7490,8 +7497,8 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                       </Sequence>
                                     </If.Else>
                                   </If>
-                                  <Delay Duration="00:02:00" sap:VirtualizedContainerService.HintSize="545.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
-                                  <Sequence sap2010:Annotation.AnnotationText="Workflow to provide K1 Reclass associated data to the verification wizard after add document is performed." DisplayName="Verification_Wizard" sap:VirtualizedContainerService.HintSize="545.6,100.8" sap2010:WorkflowViewState.IdRef="Sequence_246">
+                                  <Delay Duration="00:02:00" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                                  <Sequence sap2010:Annotation.AnnotationText="Workflow to provide K1 Reclass associated data to the verification wizard after add document is performed." DisplayName="Verification_Wizard" sap:VirtualizedContainerService.HintSize="449.6,100.8" sap2010:WorkflowViewState.IdRef="Sequence_246">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -7521,8 +7528,8 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
                                   </Sequence>
-                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:05" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="545.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Binder has been processed through Verification Wizard.&quot;]" />
-                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Seq_ModelTest - Invoke Workflow File (SubProcess_K1GenericFlows\GR_1_2_GoCCH\Seq_ModelTest.xaml)" sap:VirtualizedContainerService.HintSize="545.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_264" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_1_2_GoCCH\Seq_ModelTest.xaml">
+                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:05" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="449.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Binder has been processed through Verification Wizard.&quot;]" />
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Seq_ModelTest - Invoke Workflow File (SubProcess_K1GenericFlows\GR_1_2_GoCCH\Seq_ModelTest.xaml)" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_264" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_1_2_GoCCH\Seq_ModelTest.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_83" />
                                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_81" />
@@ -7530,7 +7537,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                       <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="545.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_201" Level="Info" Message="[&quot;TC_63 Verify suggestions are available on subsequent&#xA;submission as well&quot;+&quot;Passed.&quot;]">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_201" Level="Info" Message="[&quot;TC_63 Verify suggestions are available on subsequent&#xA;submission as well&quot;+&quot;Passed.&quot;]">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -7538,7 +7545,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:LogMessage>
-                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TC 63 TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="545.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_343" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TC 63 TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_343" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_TCReport">[dt_K1ConsoReport]</InOutArgument>
                                       <InArgument x:TypeArguments="x:String" x:Key="in_TCID">TC_63</InArgument>
@@ -7546,7 +7553,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                       <InArgument x:TypeArguments="x:String" x:Key="in_TCComments">Unable to Verify Post Reclass functionality when all the suggestion provided by sureprep are cleared by the user</InArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
-                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="545.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_31">
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_31">
                                     <ui:CommentOut.Body>
                                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_327">
                                         <sap:WorkflowViewStateService.ViewState>
@@ -8087,7 +8094,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:CommentOut>
-                                  <TryCatch DisplayName="TC 81,82, 83" sap:VirtualizedContainerService.HintSize="545.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_44">
+                                  <TryCatch DisplayName="TC 81,82, 83" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_44">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -8095,13 +8102,13 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <TryCatch.Try>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="416,787.2" sap2010:WorkflowViewState.IdRef="Sequence_534">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="416,785.6" sap2010:WorkflowViewState.IdRef="Sequence_534">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Seq_TC81_83_ModelTest - Invoke Workflow File (SubProcess_K1GenericFlows\GR_6_GoCCH\Seq_TC81_83_ModelTest.xaml)" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_345" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_6_GoCCH\Seq_ModelTestResults.xaml">
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Seq_TC81_83_ModelTest - Invoke Workflow File (SubProcess_K1GenericFlows\GR_6_GoCCH\Seq_TC81_83_ModelTest.xaml)" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_345" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_7_GoCCH\Seq_ModelTestResults.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_83">[str_TC_83]</OutArgument>
                                             <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TC_81">[str_TC_81]</OutArgument>
@@ -8182,7 +8189,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                       </Catch>
                                     </TryCatch.Catches>
                                   </TryCatch>
-                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SuggestionsandReclassFieldVerification - Add_Doc - Invoke Workflow File (SubProcess_K1GenericFlows\GR_6_GoCCH\SuggestionsandReclassFieldVerification - Add_Doc.xaml)" sap:VirtualizedContainerService.HintSize="545.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_361" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_6_GoCCH\SuggestionsandReclassFieldVerification - Add_Doc.xaml">
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SuggestionsandReclassFieldVerification - Add_Doc - Invoke Workflow File (SubProcess_K1GenericFlows\GR_6_GoCCH\SuggestionsandReclassFieldVerification - Add_Doc.xaml)" sap:VirtualizedContainerService.HintSize="449.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_361" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_7_GoCCH\SuggestionsandReclassFieldVerification - Add_Doc.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                                       <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
@@ -8206,7 +8213,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                         </Sequence>
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="769.6,106.4" sap2010:WorkflowViewState.IdRef="Catch`1_18">
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="673.6,503.2" sap2010:WorkflowViewState.IdRef="Catch`1_18">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -8217,11 +8224,11 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                             </ActivityAction.Argument>
-                            <Sequence sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_533">
+                            <Sequence sap:VirtualizedContainerService.HintSize="416,432" sap2010:WorkflowViewState.IdRef="Sequence_533">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_202" Level="Info" Message="[&quot;TC_63 Verify suggestions are available on subsequent&#xA;submission as well&quot;+&quot;Failed.&quot;]">
@@ -8232,7 +8239,7 @@ If(in_TransactionItem.SpecificContent("TaxSoftware").ToString.Trim.ToUpper.Conta
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:LogMessage>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TC 63 TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="353.6,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_344" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TC 63 TCsIDLookup - Invoke Workflow File (TCsIDLookup.xaml)" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_344" UnSafe="False" WorkflowFileName="TCsIDLookup.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_TCReport">[dt_K1ConsoReport]</InOutArgument>
                                   <InArgument x:TypeArguments="x:String" x:Key="in_TCID">TC_63</InArgument>
